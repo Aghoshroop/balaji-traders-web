@@ -8,6 +8,7 @@ import type { Product } from '@/types';
 import AvailabilityBadge from '@/components/ui/AvailabilityBadge';
 import { formatPrice } from '@/lib/utils';
 import { getProductWhatsAppUrl } from '@/lib/whatsapp';
+import { CONTACT } from '@/lib/config';
 import { trackWhatsAppClick } from '@/lib/analytics';
 
 interface ProductQuickViewModalProps {
@@ -67,7 +68,7 @@ export default function ProductQuickViewModal({
         : `Hello Balaji Traders, I want to check current warehouse stock availability for ${product.name} (SKU: ${product.sku})${sizeNote}.`;
     
     const encoded = encodeURIComponent(customMsg);
-    window.open(`https://wa.me/919841022137?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/${CONTACT.whatsapp}?text=${encoded}`, '_blank');
   };
 
   return (

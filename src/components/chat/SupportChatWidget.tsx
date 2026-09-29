@@ -530,7 +530,7 @@ export default function SupportChatWidget() {
                 onClick={() => trackWhatsAppClick('chat-footer-escalation')}
                 className="text-emerald-600 hover:text-emerald-700 font-bold inline-flex items-center gap-1 shrink-0"
               >
-                <span>Direct WhatsApp (+91 98410 22137)</span>
+                <span>Direct WhatsApp ({CONTACT.phoneFormatted})</span>
                 <ExternalLink className="w-2.5 h-2.5" />
               </a>
             </div>
