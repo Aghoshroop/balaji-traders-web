@@ -161,11 +161,19 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       playPromise
         .then(() => {
           setIsPlaying(true);
+          // Hide the loading curtain so the video is visible
+          document.documentElement.classList.remove('has-splash-intro');
         })
         .catch((err) => {
           console.warn('Autoplay waiting for user gesture:', err);
           setIsPlaying(false);
+          // Even if autoplay fails, we need to show the play button, so hide curtain
+          document.documentElement.classList.remove('has-splash-intro');
         });
+    } else {
+       // Fallback if playPromise is undefined
+       setIsPlaying(true);
+       document.documentElement.classList.remove('has-splash-intro');
     }
   }, [isVisible, isPortrait, isMuted]);
 
