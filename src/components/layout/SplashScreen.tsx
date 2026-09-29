@@ -19,6 +19,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
   const [isExiting, setIsExiting] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hasAutoplayFailed, setHasAutoplayFailed] = useState(false);
   const [isPortrait, setIsPortrait] = useState(false);
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(10);
@@ -161,6 +162,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
     if (!video) return;
 
     video.muted = isMuted;
+    setHasAutoplayFailed(false);
     const playPromise = video.play();
 
     if (playPromise !== undefined) {
@@ -171,6 +173,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
         .catch((err) => {
           console.warn('Autoplay waiting for user gesture:', err);
           setIsPlaying(false);
+          setHasAutoplayFailed(true);
         });
     } else {
        setIsPlaying(true);
@@ -281,7 +284,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       {/* ============================================================ */}
       {/* 3. CENTER PLAY FALLBACK (If autoplay was blocked)            */}
       {/* ============================================================ */}
-      {!isPlaying && (
+      {hasAutoplayFailed && !isPlaying && (
         <button
           onClick={(e) => {
             e.stopPropagation();
