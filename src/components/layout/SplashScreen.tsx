@@ -195,23 +195,10 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
     }
   }, [isVisible, isExiting]);
 
-  // Keyboard accessibility: ESC or SPACE to skip, M to toggle sound
+  // No keyboard skipping allowed
   useEffect(() => {
-    if (!isVisible) return;
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' || e.key === ' ') {
-        e.preventDefault();
-        handleDismiss();
-      } else if (e.key.toLowerCase() === 'm') {
-        e.preventDefault();
-        toggleSound();
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isVisible, handleDismiss, isMuted]);
+    // Intentionally empty: skipping is disabled.
+  }, []);
 
   // Safety fallback: maximum 12 seconds
   useEffect(() => {
@@ -261,12 +248,11 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       role="dialog"
       aria-label="Welcome to Balaji Traders splash screen"
       aria-modal="true"
-      className={`fixed inset-0 z-[9999] bg-black flex items-center justify-center overflow-hidden transition-all duration-700 ease-out select-none cursor-pointer ${
+      className={`fixed inset-0 z-[9999] bg-black flex items-center justify-center overflow-hidden transition-all duration-700 ease-out select-none ${
         isExiting
           ? 'opacity-0 scale-105 pointer-events-none'
           : 'opacity-100 scale-100'
       }`}
-      onClick={handleDismiss}
     >
       {/* ============================================================ */}
       {/* 1. CINEMATIC BACKGROUND VIDEO (PORTRAIT & LANDSCAPE ADAPTIVE) */}
