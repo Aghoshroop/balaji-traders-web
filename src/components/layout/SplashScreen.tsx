@@ -261,11 +261,12 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       role="dialog"
       aria-label="Welcome to Balaji Traders splash screen"
       aria-modal="true"
-      className={`fixed inset-0 z-[9999] bg-black flex items-center justify-center overflow-hidden transition-all duration-700 ease-out select-none ${
+      className={`fixed inset-0 z-[9999] bg-black flex items-center justify-center overflow-hidden transition-all duration-700 ease-out select-none cursor-pointer ${
         isExiting
           ? 'opacity-0 scale-105 pointer-events-none'
           : 'opacity-100 scale-100'
       }`}
+      onClick={handleDismiss}
     >
       {/* ============================================================ */}
       {/* 1. CINEMATIC BACKGROUND VIDEO (PORTRAIT & LANDSCAPE ADAPTIVE) */}
@@ -294,70 +295,12 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       </div>
 
       {/* ============================================================ */}
-      {/* 2. TOP CONTROLS & BRAND IDENTITY BAR                         */}
-      {/* ============================================================ */}
-      <header className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between p-4 sm:p-6 lg:p-8 bg-gradient-to-b from-black/80 via-black/30 to-transparent pointer-events-auto">
-        {/* Brand identity badge */}
-        <div className="flex items-center gap-3">
-          <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-sky-500/20 border border-sky-400/40 backdrop-blur-md">
-            <span className="w-2.5 h-2.5 rounded-full bg-sky-400 animate-ping absolute" />
-            <span className="w-2 h-2 rounded-full bg-sky-400 relative" />
-          </div>
-          <div>
-            <div className="text-white text-xs sm:text-sm font-black uppercase tracking-[0.2em] flex items-center gap-2">
-              <span>{BUSINESS.name}</span>
-              <span className="text-[10px] technical-mono font-medium text-sky-400 bg-sky-950/80 px-1.5 py-0.5 rounded border border-sky-800/60 hidden sm:inline-block">
-                CHENNAI
-              </span>
-            </div>
-            <p className="text-[10px] text-slate-300 technical-mono tracking-wider hidden sm:block">
-              SWIMWEAR DISTRIBUTION · EST. {BUSINESS.established}
-            </p>
-          </div>
-        </div>
-
-        {/* Audio Toggle Pill */}
-        <button
-          onClick={toggleSound}
-          type="button"
-          aria-label={isMuted ? 'Turn sound on' : 'Mute sound'}
-          className={`flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-medium backdrop-blur-md border transition-all cursor-pointer shadow-lg active:scale-95 ${
-            isMuted
-              ? 'bg-black/50 text-slate-200 border-white/20 hover:bg-black/80 hover:border-sky-400/60 hover:text-white'
-              : 'bg-sky-500/20 text-sky-300 border-sky-400/60 hover:bg-sky-500/30'
-          }`}
-        >
-          {isMuted ? (
-            <>
-              <VolumeX className="w-4 h-4 text-slate-300" />
-              <span className="font-semibold">Sound Off</span>
-              {!hasInteracted && (
-                <span className="hidden md:inline text-[10px] text-sky-300 ml-1 font-mono uppercase bg-sky-900/60 px-1.5 py-0.5 rounded border border-sky-600/40">
-                  Tap to Listen
-                </span>
-              )}
-            </>
-          ) : (
-            <>
-              <Volume2 className="w-4 h-4 text-sky-400 animate-pulse" />
-              <span className="font-semibold text-white">Sound On</span>
-              {/* Dynamic audio waves indicator */}
-              <div className="flex items-center gap-0.5 h-3 ml-1">
-                <span className="w-0.5 h-2 bg-sky-400 rounded-full animate-bounce [animation-delay:-0.3s]" />
-                <span className="w-0.5 h-3 bg-sky-400 rounded-full animate-bounce [animation-delay:-0.15s]" />
-                <span className="w-0.5 h-1.5 bg-sky-400 rounded-full animate-bounce" />
-              </div>
-            </>
-          )}
-        </button>
-      </header>
-
-      {/* ============================================================ */}
       {/* 3. CENTER PLAY FALLBACK (If autoplay was blocked)            */}
       {/* ============================================================ */}
       {!isPlaying && (
         <button
-          onClick={() => {
+          onClick={(e) => {
+            e.stopPropagation();
             if (videoRef.current) {
               videoRef.current.play().then(() => setIsPlaying(true));
             }
@@ -373,51 +316,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
           </span>
         </button>
       )}
-
-      {/* ============================================================ */}
-      {/* 4. BOTTOM CONTROLS: SKIP BUTTON & PROGRESS BAR               */}
-      {/* ============================================================ */}
-      <footer className="absolute bottom-0 left-0 right-0 z-20 p-4 sm:p-6 lg:p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-center justify-between pointer-events-auto">
-        {/* Keyboard Hint */}
-        <div className="hidden sm:flex items-center gap-2 text-[11px] technical-mono text-slate-400">
-          <span className="px-1.5 py-0.5 rounded bg-white/10 border border-white/15 text-slate-300">
-            ESC
-          </span>
-          <span>to skip intro</span>
-          <span className="mx-1 text-slate-600">·</span>
-          <span className="px-1.5 py-0.5 rounded bg-white/10 border border-white/15 text-slate-300">
-            M
-          </span>
-          <span>to toggle sound</span>
-        </div>
-
-        {/* Skip button with countdown */}
-        <div className="ml-auto flex items-center gap-3">
-          <button
-            onClick={handleDismiss}
-            type="button"
-            className="group flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 backdrop-blur-md border border-white/25 hover:border-white/50 text-white text-xs sm:text-sm font-semibold tracking-wide uppercase transition-all cursor-pointer shadow-xl"
-          >
-            <span>Skip Intro</span>
-            {secondsRemaining > 0 && (
-              <span className="technical-mono text-xs text-sky-300 bg-sky-950/80 px-1.5 py-0.5 rounded border border-sky-800/80">
-                {secondsRemaining}s
-              </span>
-            )}
-            <FastForward className="w-4 h-4 text-sky-400 group-hover:translate-x-0.5 transition-transform" />
-          </button>
-        </div>
-      </footer>
-
-      {/* ============================================================ */}
-      {/* 5. RAZOR-THIN ELECTRIC PROGRESS BAR ALONG THE BOTTOM EDGE   */}
-      {/* ============================================================ */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/15 z-30 overflow-hidden">
-        <div
-          className="h-full bg-gradient-to-r from-sky-400 via-cyan-300 to-sky-300 transition-all duration-100 ease-linear shadow-[0_0_10px_rgba(56,189,248,0.7)]"
-          style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
-        />
-      </div>
     </div>
   );
 }
