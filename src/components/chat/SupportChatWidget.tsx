@@ -287,6 +287,28 @@ export default function SupportChatWidget() {
         data-coachmark-target="chatbot-launcher"
         className="fixed bottom-20 lg:bottom-6 right-3 sm:right-6 z-40 flex flex-col items-end pointer-events-auto"
       >
+        {/* Gentle Pulse Tooltip (Secondary Education) */}
+        {showWelcomeTooltip && !isOpen && !showCoachMark && (
+          <div className="absolute bottom-full right-0 mb-3 sm:mb-4 w-max animate-fade-in-up origin-bottom-right">
+            <div className="relative bg-slate-900 text-white text-[10px] sm:text-xs font-bold px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl shadow-xl shadow-sky-900/20 border border-sky-500/30 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+              <span>Try our new AI Assistant!</span>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowWelcomeTooltip(false);
+                }}
+                className="ml-1 sm:ml-2 p-0.5 rounded-md hover:bg-slate-700 text-slate-400 hover:text-white transition-colors focus:outline-hidden"
+              >
+                <X className="w-3 h-3" />
+              </button>
+              {/* Tooltip Arrow */}
+              <div className="absolute -bottom-2 right-4 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-slate-900" />
+              <div className="absolute -bottom-[9px] right-[15px] w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-t-[9px] border-t-sky-500/30 -z-10" />
+            </div>
+          </div>
+        )}
+
         {/* Floating trigger button - Dedicated AI Support styling */}
         {!isOpen && (
           <button

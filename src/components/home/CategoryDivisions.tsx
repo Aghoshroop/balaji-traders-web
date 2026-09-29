@@ -154,14 +154,14 @@ export default function CategoryDivisions() {
         <div className="mt-8 sm:mt-10">
           {activeTab === 'all' ? (
             /* ASYMMETRIC BENTO GRID (ALL 5 DIVISIONS) */
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 sm:gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-12 gap-3 sm:gap-6">
               {/* Card 1: Men's Performance (7 cols) */}
               {(() => {
                 const cat = categories[0];
                 const meta = divisionMeta[cat.slug];
                 const catProducts = products.filter((p) => p.categorySlug === cat.slug);
                 return (
-                  <div className="lg:col-span-7 group relative rounded-3xl overflow-hidden bg-slate-950 text-white border border-slate-800 shadow-lg hover:shadow-2xl transition-all duration-300 min-h-[380px] sm:min-h-[440px] flex flex-col justify-end p-6 sm:p-8 lg:p-10">
+                  <div className="col-span-2 lg:col-span-7 group relative rounded-[1.25rem] sm:rounded-3xl overflow-hidden bg-slate-950 text-white border border-slate-800 shadow-lg hover:shadow-2xl transition-all duration-300 min-h-[260px] sm:min-h-[440px] flex flex-col justify-end p-5 sm:p-8 lg:p-10">
                     <Image
                       src={meta.bgImage}
                       alt={cat.name}
@@ -172,56 +172,57 @@ export default function CategoryDivisions() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent z-10" />
 
                     <div className="relative z-20">
-                      <div className="flex flex-wrap items-center gap-2 mb-3">
-                        <span className="px-2.5 py-1 rounded-md bg-sky-500/20 text-sky-300 text-[10px] font-bold technical-mono uppercase border border-sky-500/30">
+                      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                        <span className="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md bg-sky-500/20 text-sky-300 text-[9px] sm:text-[10px] font-bold technical-mono uppercase border border-sky-500/30">
                           {meta.divisionCode}
                         </span>
-                        <span className="px-2.5 py-1 rounded-md bg-white/10 text-white text-[10px] font-bold technical-mono uppercase backdrop-blur-xs">
+                        <span className="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md bg-white/10 text-white text-[9px] sm:text-[10px] font-bold technical-mono uppercase backdrop-blur-xs">
                           {meta.badge}
                         </span>
-                        <span className="text-[10px] technical-mono text-slate-300 ml-auto hidden sm:block">
+                        <span className="text-[9px] sm:text-[10px] technical-mono text-slate-300 ml-auto hidden sm:block">
                           {catProducts.length} Stocked Lines
                         </span>
                       </div>
 
-                      <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-white mb-2">
+                      <h3 className="text-xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-white mb-1.5 sm:mb-2">
                         {meta.headline}
                       </h3>
-                      <p className="text-xs sm:text-sm text-slate-300 font-normal leading-relaxed max-w-xl mb-5">
+                      <p className="text-[10px] sm:text-sm text-slate-300 font-normal leading-relaxed max-w-xl mb-3 sm:mb-5 line-clamp-2 sm:line-clamp-none">
                         {meta.subtext}
                       </p>
 
                       {/* Specs and Samples Pills */}
-                      <div className="flex flex-wrap items-center gap-2 mb-6">
+                      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-4 sm:mb-6">
                         {meta.specs.map((spec) => (
                           <span
                             key={spec}
-                            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-900/80 border border-slate-700/80 text-[10px] font-semibold text-slate-200 technical-mono"
+                            className="inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-slate-900/80 border border-slate-700/80 text-[9px] sm:text-[10px] font-semibold text-slate-200 technical-mono"
                           >
-                            <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+                            <CheckCircle2 className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-emerald-400" />
                             <span>{spec}</span>
                           </span>
                         ))}
                       </div>
 
                       {/* Action Row */}
-                      <div className="flex flex-wrap items-center gap-3">
+                      <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                         <Link
                           href={`/categories/${cat.slug}`}
-                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-950 text-xs font-bold uppercase tracking-wider transition-colors shadow-xs"
+                          className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-950 text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-colors shadow-xs"
                         >
                           <span>Explore Department</span>
-                          <ArrowRight className="w-3.5 h-3.5" />
+                          <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                         </Link>
                         <a
                           href={getGeneralWhatsAppUrl(`Hello Balaji Traders, I would like wholesale prices for ${cat.name} lots.`)}
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={() => trackWhatsAppClick('category-bento-mens')}
-                          className="whatsapp-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold uppercase tracking-wider shadow-xs"
+                          className="whatsapp-btn inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider shadow-xs"
                         >
-                          <MessageCircle className="w-3.5 h-3.5" />
-                          <span>Wholesale Lot Inquiry</span>
+                          <MessageCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                          <span className="hidden sm:inline">Wholesale Lot Inquiry</span>
+                          <span className="sm:hidden">Inquiry</span>
                         </a>
                       </div>
                     </div>
@@ -235,7 +236,7 @@ export default function CategoryDivisions() {
                 const meta = divisionMeta[cat.slug];
                 const catProducts = products.filter((p) => p.categorySlug === cat.slug);
                 return (
-                  <div className="lg:col-span-5 group relative rounded-3xl overflow-hidden bg-slate-950 text-white border border-slate-800 shadow-lg hover:shadow-2xl transition-all duration-300 min-h-[380px] sm:min-h-[440px] flex flex-col justify-end p-6 sm:p-8">
+                  <div className="col-span-1 md:col-span-2 lg:col-span-5 group relative rounded-[1.25rem] sm:rounded-3xl overflow-hidden bg-slate-950 text-white border border-slate-800 shadow-lg hover:shadow-2xl transition-all duration-300 min-h-[220px] sm:min-h-[440px] flex flex-col justify-end p-4 sm:p-8">
                     <Image
                       src={meta.bgImage}
                       alt={cat.name}
@@ -245,23 +246,23 @@ export default function CategoryDivisions() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent z-10" />
 
                     <div className="relative z-20">
-                      <div className="flex flex-wrap items-center gap-2 mb-3">
-                        <span className="px-2.5 py-1 rounded-md bg-cyan-500/20 text-cyan-300 text-[10px] font-bold technical-mono uppercase border border-cyan-500/30">
+                      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                        <span className="px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-md bg-cyan-500/20 text-cyan-300 text-[8px] sm:text-[10px] font-bold technical-mono uppercase border border-cyan-500/30">
                           {meta.divisionCode}
                         </span>
-                        <span className="px-2.5 py-1 rounded-md bg-white/10 text-white text-[10px] font-bold technical-mono uppercase backdrop-blur-xs">
+                        <span className="hidden sm:inline-block px-2.5 py-1 rounded-md bg-white/10 text-white text-[10px] font-bold technical-mono uppercase backdrop-blur-xs">
                           {meta.badge}
                         </span>
                       </div>
 
-                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-black uppercase tracking-tight text-white mb-2">
+                      <h3 className="text-sm sm:text-2xl lg:text-3xl font-black uppercase tracking-tight text-white mb-1 sm:mb-2">
                         {meta.headline}
                       </h3>
-                      <p className="text-xs text-slate-300 font-normal leading-relaxed mb-4">
+                      <p className="text-[9px] sm:text-xs text-slate-300 font-normal leading-relaxed mb-3 sm:mb-4 line-clamp-2">
                         {meta.subtext}
                       </p>
 
-                      <div className="flex flex-wrap items-center gap-2 mb-6">
+                      <div className="hidden sm:flex flex-wrap items-center gap-2 mb-6">
                         {meta.specs.map((spec) => (
                           <span
                             key={spec}
@@ -273,23 +274,23 @@ export default function CategoryDivisions() {
                         ))}
                       </div>
 
-                      <div className="flex items-center gap-2.5">
+                      <div className="flex items-center gap-2 sm:gap-2.5">
                         <Link
                           href={`/categories/${cat.slug}`}
-                          className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-950 text-xs font-bold uppercase tracking-wider transition-colors shadow-xs text-center"
+                          className="flex-1 inline-flex items-center justify-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-950 text-[9px] sm:text-xs font-bold uppercase tracking-wider transition-colors shadow-xs text-center"
                         >
-                          <span>Explore ({catProducts.length})</span>
-                          <ArrowRight className="w-3.5 h-3.5" />
+                          <span>Explore<span className="hidden sm:inline"> ({catProducts.length})</span></span>
+                          <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 hidden sm:block" />
                         </Link>
                         <a
                           href={getGeneralWhatsAppUrl(`Hello Balaji Traders, I would like wholesale prices for ${cat.name} lots.`)}
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={() => trackWhatsAppClick('category-bento-womens')}
-                          className="whatsapp-btn p-2.5 rounded-xl text-white shadow-xs shrink-0"
+                          className="whatsapp-btn p-2 sm:p-2.5 rounded-xl text-white shadow-xs shrink-0"
                           title="WhatsApp Wholesale Inquiry"
                         >
-                          <MessageCircle className="w-4 h-4" />
+                          <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                         </a>
                       </div>
                     </div>
@@ -303,7 +304,7 @@ export default function CategoryDivisions() {
                 const meta = divisionMeta[cat.slug];
                 const catProducts = products.filter((p) => p.categorySlug === cat.slug);
                 return (
-                  <div className="md:col-span-1 lg:col-span-4 group relative rounded-3xl overflow-hidden bg-slate-950 text-white border border-slate-800 shadow-md hover:shadow-xl transition-all duration-300 min-h-[340px] flex flex-col justify-end p-6">
+                  <div className="col-span-1 md:col-span-1 lg:col-span-4 group relative rounded-[1.25rem] sm:rounded-3xl overflow-hidden bg-slate-950 text-white border border-slate-800 shadow-md hover:shadow-xl transition-all duration-300 min-h-[220px] sm:min-h-[340px] flex flex-col justify-end p-4 sm:p-6">
                     <Image
                       src={meta.bgImage}
                       alt={cat.name}
@@ -313,38 +314,38 @@ export default function CategoryDivisions() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent z-10" />
 
                     <div className="relative z-20">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-300 text-[9px] font-bold technical-mono uppercase border border-amber-500/30">
+                      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1.5 sm:mb-2">
+                        <span className="px-1.5 sm:px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-300 text-[8px] sm:text-[9px] font-bold technical-mono uppercase border border-amber-500/30">
                           {meta.divisionCode}
                         </span>
-                        <span className="text-[10px] technical-mono text-slate-300 ml-auto">
+                        <span className="text-[8px] sm:text-[10px] technical-mono text-slate-300 ml-auto hidden sm:block">
                           {catProducts.length} Items
                         </span>
                       </div>
 
-                      <h4 className="text-lg sm:text-xl font-black uppercase tracking-tight text-white mb-1.5">
+                      <h4 className="text-sm sm:text-xl font-black uppercase tracking-tight text-white mb-1 sm:mb-1.5">
                         {meta.headline}
                       </h4>
-                      <p className="text-xs text-slate-300 line-clamp-2 mb-4 leading-relaxed font-normal">
+                      <p className="text-[9px] sm:text-xs text-slate-300 line-clamp-2 mb-2 sm:mb-4 leading-relaxed font-normal">
                         {meta.subtext}
                       </p>
 
-                      <div className="flex items-center justify-between pt-3 border-t border-slate-800">
+                      <div className="flex items-center justify-between pt-2 sm:pt-3 border-t border-slate-800">
                         <Link
                           href={`/categories/${cat.slug}`}
-                          className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 hover:text-sky-300 uppercase tracking-wider transition-colors"
+                          className="inline-flex items-center gap-1 sm:gap-1.5 text-[9px] sm:text-xs font-bold text-sky-400 hover:text-sky-300 uppercase tracking-wider transition-colors"
                         >
-                          <span>View Academy Suits</span>
-                          <ChevronRight className="w-3.5 h-3.5" />
+                          <span>View<span className="hidden sm:inline"> Academy Suits</span></span>
+                          <ChevronRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                         </Link>
                         <a
                           href={getGeneralWhatsAppUrl(`Hello Balaji Traders, I need pricing for Junior / Academy swimwear lots.`)}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="whatsapp-btn p-2 rounded-lg text-white"
+                          className="whatsapp-btn p-1.5 sm:p-2 rounded-lg text-white"
                           title="WhatsApp Bulk Pricing"
                         >
-                          <MessageCircle className="w-3.5 h-3.5" />
+                          <MessageCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                         </a>
                       </div>
                     </div>
@@ -358,7 +359,7 @@ export default function CategoryDivisions() {
                 const meta = divisionMeta[cat.slug];
                 const catProducts = products.filter((p) => p.categorySlug === cat.slug);
                 return (
-                  <div className="md:col-span-1 lg:col-span-4 group relative rounded-3xl overflow-hidden bg-slate-950 text-white border border-slate-800 shadow-md hover:shadow-xl transition-all duration-300 min-h-[340px] flex flex-col justify-end p-6">
+                  <div className="col-span-1 md:col-span-1 lg:col-span-4 group relative rounded-[1.25rem] sm:rounded-3xl overflow-hidden bg-slate-950 text-white border border-slate-800 shadow-md hover:shadow-xl transition-all duration-300 min-h-[220px] sm:min-h-[340px] flex flex-col justify-end p-4 sm:p-6">
                     <Image
                       src={meta.bgImage}
                       alt={cat.name}
@@ -368,38 +369,38 @@ export default function CategoryDivisions() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent z-10" />
 
                     <div className="relative z-20">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="px-2 py-0.5 rounded-md bg-indigo-500/20 text-indigo-300 text-[9px] font-bold technical-mono uppercase border border-indigo-500/30">
+                      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1.5 sm:mb-2">
+                        <span className="px-1.5 sm:px-2 py-0.5 rounded-md bg-indigo-500/20 text-indigo-300 text-[8px] sm:text-[9px] font-bold technical-mono uppercase border border-indigo-500/30">
                           {meta.divisionCode}
                         </span>
-                        <span className="text-[10px] technical-mono text-slate-300 ml-auto">
+                        <span className="text-[8px] sm:text-[10px] technical-mono text-slate-300 ml-auto hidden sm:block">
                           {catProducts.length} Items
                         </span>
                       </div>
 
-                      <h4 className="text-lg sm:text-xl font-black uppercase tracking-tight text-white mb-1.5">
+                      <h4 className="text-sm sm:text-xl font-black uppercase tracking-tight text-white mb-1 sm:mb-1.5">
                         {meta.headline}
                       </h4>
-                      <p className="text-xs text-slate-300 line-clamp-2 mb-4 leading-relaxed font-normal">
+                      <p className="text-[9px] sm:text-xs text-slate-300 line-clamp-2 mb-2 sm:mb-4 leading-relaxed font-normal">
                         {meta.subtext}
                       </p>
 
-                      <div className="flex items-center justify-between pt-3 border-t border-slate-800">
+                      <div className="flex items-center justify-between pt-2 sm:pt-3 border-t border-slate-800">
                         <Link
                           href={`/categories/${cat.slug}`}
-                          className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 hover:text-sky-300 uppercase tracking-wider transition-colors"
+                          className="inline-flex items-center gap-1 sm:gap-1.5 text-[9px] sm:text-xs font-bold text-sky-400 hover:text-sky-300 uppercase tracking-wider transition-colors"
                         >
-                          <span>View Tech Racing</span>
-                          <ChevronRight className="w-3.5 h-3.5" />
+                          <span>View<span className="hidden sm:inline"> Tech Racing</span></span>
+                          <ChevronRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                         </Link>
                         <a
                           href={getGeneralWhatsAppUrl(`Hello Balaji Traders, I need bulk pricing for Competition Tech swimwear.`)}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="whatsapp-btn p-2 rounded-lg text-white"
+                          className="whatsapp-btn p-1.5 sm:p-2 rounded-lg text-white"
                           title="WhatsApp Bulk Pricing"
                         >
-                          <MessageCircle className="w-3.5 h-3.5" />
+                          <MessageCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                         </a>
                       </div>
                     </div>
@@ -413,7 +414,7 @@ export default function CategoryDivisions() {
                 const meta = divisionMeta[cat.slug];
                 const catProducts = products.filter((p) => p.categorySlug === cat.slug);
                 return (
-                  <div className="md:col-span-2 lg:col-span-4 group relative rounded-3xl overflow-hidden bg-slate-950 text-white border border-slate-800 shadow-md hover:shadow-xl transition-all duration-300 min-h-[340px] flex flex-col justify-end p-6">
+                  <div className="col-span-1 md:col-span-2 lg:col-span-4 group relative rounded-[1.25rem] sm:rounded-3xl overflow-hidden bg-slate-950 text-white border border-slate-800 shadow-md hover:shadow-xl transition-all duration-300 min-h-[220px] sm:min-h-[340px] flex flex-col justify-end p-4 sm:p-6">
                     <Image
                       src={meta.bgImage}
                       alt={cat.name}
@@ -423,38 +424,38 @@ export default function CategoryDivisions() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent z-10" />
 
                     <div className="relative z-20">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 text-[9px] font-bold technical-mono uppercase border border-emerald-500/30">
+                      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1.5 sm:mb-2">
+                        <span className="px-1.5 sm:px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 text-[8px] sm:text-[9px] font-bold technical-mono uppercase border border-emerald-500/30">
                           {meta.divisionCode}
                         </span>
-                        <span className="text-[10px] technical-mono text-slate-300 ml-auto">
+                        <span className="text-[8px] sm:text-[10px] technical-mono text-slate-300 ml-auto hidden sm:block">
                           {catProducts.length} Items
                         </span>
                       </div>
 
-                      <h4 className="text-lg sm:text-xl font-black uppercase tracking-tight text-white mb-1.5">
+                      <h4 className="text-sm sm:text-xl font-black uppercase tracking-tight text-white mb-1 sm:mb-1.5">
                         {meta.headline}
                       </h4>
-                      <p className="text-xs text-slate-300 line-clamp-2 mb-4 leading-relaxed font-normal">
+                      <p className="text-[9px] sm:text-xs text-slate-300 line-clamp-2 mb-2 sm:mb-4 leading-relaxed font-normal">
                         {meta.subtext}
                       </p>
 
-                      <div className="flex items-center justify-between pt-3 border-t border-slate-800">
+                      <div className="flex items-center justify-between pt-2 sm:pt-3 border-t border-slate-800">
                         <Link
                           href={`/categories/${cat.slug}`}
-                          className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 hover:text-sky-300 uppercase tracking-wider transition-colors"
+                          className="inline-flex items-center gap-1 sm:gap-1.5 text-[9px] sm:text-xs font-bold text-sky-400 hover:text-sky-300 uppercase tracking-wider transition-colors"
                         >
-                          <span>View Optics & Caps</span>
-                          <ChevronRight className="w-3.5 h-3.5" />
+                          <span>View<span className="hidden sm:inline"> Optics & Caps</span></span>
+                          <ChevronRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                         </Link>
                         <a
                           href={getGeneralWhatsAppUrl(`Hello Balaji Traders, I need wholesale details for goggles and silicone caps.`)}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="whatsapp-btn p-2 rounded-lg text-white"
+                          className="whatsapp-btn p-1.5 sm:p-2 rounded-lg text-white"
                           title="WhatsApp Bulk Pricing"
                         >
-                          <MessageCircle className="w-3.5 h-3.5" />
+                          <MessageCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                         </a>
                       </div>
                     </div>

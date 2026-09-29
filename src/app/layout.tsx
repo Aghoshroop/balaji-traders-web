@@ -25,6 +25,10 @@ export const metadata: Metadata = {
   description: SEO.defaultDescription,
   keywords: [...SEO.defaultKeywords],
   authors: [{ name: BUSINESS.name }],
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_IN',

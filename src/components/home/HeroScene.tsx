@@ -8,7 +8,7 @@ import { getGeneralWhatsAppUrl } from '@/lib/whatsapp';
 
 export default function HeroScene() {
   return (
-    <section className="relative w-full bg-transparent overflow-hidden pt-16 min-[400px]:pt-20 sm:pt-24 lg:pt-24 border-b border-slate-200/80">
+    <section className="relative w-full bg-transparent overflow-hidden -mt-20 sm:-mt-24 lg:-mt-28 pt-36 min-[400px]:pt-40 sm:pt-48 lg:pt-52 border-b border-slate-200/80">
       {/* 1. BACKGROUND: HIGH-DEFINITION SWIMMING VIDEO + ARCHITECTURAL CUT */}
       {/* ============================================================ */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none select-none">
