@@ -81,6 +81,12 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       // Mark session as entered immediately so subsequent reloads and page changes never trigger splash
       sessionStorage.setItem(SESSION_KEY, 'true');
       setIsVisible(true);
+      
+      // Hide the loading spinner immediately once React hydrates and SplashScreen decides to show.
+      // This allows the video to buffer natively without being covered by a 10-second spinner.
+      setTimeout(() => {
+        document.documentElement.classList.remove('has-splash-intro');
+      }, 50);
     } catch {
       // In case sessionStorage is restricted in incognito/embedded webviews
     }
@@ -161,19 +167,13 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       playPromise
         .then(() => {
           setIsPlaying(true);
-          // Hide the loading curtain so the video is visible
-          document.documentElement.classList.remove('has-splash-intro');
         })
         .catch((err) => {
           console.warn('Autoplay waiting for user gesture:', err);
           setIsPlaying(false);
-          // Even if autoplay fails, we need to show the play button, so hide curtain
-          document.documentElement.classList.remove('has-splash-intro');
         });
     } else {
-       // Fallback if playPromise is undefined
        setIsPlaying(true);
-       document.documentElement.classList.remove('has-splash-intro');
     }
   }, [isVisible, isPortrait, isMuted]);
 
@@ -260,8 +260,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       <div className="absolute inset-0 w-full h-full flex items-center justify-center overflow-hidden">
         <video
           ref={videoRef}
-          key={isPortrait ? 'portrait-splash' : 'landscape-splash'}
-          src={isPortrait ? '/videos/splash-potrait.mp4' : '/videos/splash.mp4'}
           playsInline
           autoPlay
           muted={isMuted}
