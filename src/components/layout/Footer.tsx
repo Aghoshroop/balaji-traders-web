@@ -130,10 +130,6 @@ export default function Footer() {
                     <a href={getPhoneUrl()} className="hover:text-white font-medium transition-colors">
                       {CONTACT.phone}
                     </a>
-                    <span className="text-slate-600">/</span>
-                    <a href={`tel:${CONTACT.phoneSecondary}`} className="hover:text-white font-medium transition-colors">
-                      {CONTACT.phoneSecondary}
-                    </a>
                   </div>
                   <span className="text-[11px] text-slate-400 block mt-0.5">Wholesale & Order Desk</span>
                 </div>

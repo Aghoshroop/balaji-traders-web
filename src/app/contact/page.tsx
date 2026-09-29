@@ -51,14 +51,7 @@ export default function ContactPage() {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-900 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-xl transition-colors"
             >
               <Phone className="w-4 h-4 text-sky-600" />
-              Call 1: {CONTACT.phone}
-            </a>
-            <a
-              href={`tel:${CONTACT.phoneSecondary}`}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-900 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-xl transition-colors"
-            >
-              <Phone className="w-4 h-4 text-sky-600" />
-              Call 2: {CONTACT.phoneSecondary}
+              Call: {CONTACT.phone}
             </a>
           </div>
         </div>
@@ -220,9 +213,6 @@ export default function ContactPage() {
               <div className="space-y-0.5">
                 <a href={getPhoneUrl()} className="text-sky-400 hover:underline block font-semibold">
                   {CONTACT.phone}
-                </a>
-                <a href={`tel:${CONTACT.phoneSecondary}`} className="text-sky-400 hover:underline block font-semibold">
-                  {CONTACT.phoneSecondary}
                 </a>
               </div>
             </div>

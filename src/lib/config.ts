@@ -30,13 +30,13 @@ export const BUSINESS = {
 export const CONTACT = {
   // Business WhatsApp number (with country code, no +)
   whatsapp: '919380898894',
-  whatsappSecondary: '919789925998',
+  whatsappSecondary: '919380898894',
   // Business phone numbers
   phone: '+91-9380898894',
   phoneFormatted: '+91 93808 98894',
-  phoneSecondary: '+91-9789925998',
-  phoneSecondaryFormatted: '+91 97899 25998',
-  phoneCombined: '+91-9380898894 / 9789925998',
+  phoneSecondary: '+91-9380898894',
+  phoneSecondaryFormatted: '+91 93808 98894',
+  phoneCombined: '+91-9380898894',
   // Business email
   email: 'info@balajitraders.com',
   // Google Maps URL targeting exact street address in Otteri, Chennai 600012

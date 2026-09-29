@@ -12,8 +12,8 @@ COMPANY OVERVIEW:
 - Established: ${BUSINESS.established} (over 25 years of trusted swimwear service in Chennai)
 - Core Focus: Leading distributor and retailer of competition racing swimwear, athletic suits, and aquatic training accessories.
 - Address / Store Location: ${BUSINESS.location.fullAddress}
-- Phone Support: ${CONTACT.phone} / ${CONTACT.phoneSecondary}
-- WhatsApp Desk: ${CONTACT.phoneFormatted} (+91 98410 22137)
+- Phone Support: ${CONTACT.phone}
+- WhatsApp Desk: ${CONTACT.phoneFormatted}
 - Working Hours: Monday through Saturday, 9:30 AM to 7:30 PM (Sunday closed)
 
 PRIMARY BRAND & PRODUCTS DISTRIBUTED:
