@@ -10,7 +10,7 @@ export default function SmoothScrollProvider({ children }: { children: ReactNode
     // Initialize Lenis
     const lenis = new Lenis({
       duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function
       direction: 'vertical', // vertical, horizontal
       gestureDirection: 'vertical', // vertical, horizontal, both
       smooth: true,
