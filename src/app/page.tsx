@@ -113,7 +113,7 @@ export default function HomePage() {
 
                 <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 z-10 flex items-center justify-center product-float">
                   <Image
-                    src="/images/products/mens-racing-jammer-black.png"
+                    src="/images/products/real-product-1-1.jpeg"
                     alt="EGLIDER Pro Racing Jammer"
                     fill
                     className="object-contain filter drop-shadow-[0_25px_40px_rgba(0,0,0,0.9)] group-hover:scale-105 transition-transform duration-700"
@@ -152,7 +152,7 @@ export default function HomePage() {
                   <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-xl bg-gradient-to-b from-slate-950 to-slate-900 border border-slate-800 p-2 flex items-center justify-center shrink-0 relative overflow-hidden group-hover:border-sky-500/50 group-hover:shadow-[0_0_20px_rgba(14,165,233,0.2)] transition-all">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.15),transparent_70%)] pointer-events-none" />
                     <Image
-                      src="/images/products/womens-racing-kneeskin.png"
+                      src="/images/products/real-product-2-1.jpeg"
                       alt="EGLIDER Racing Kneeskin"
                       width={52}
                       height={52}
@@ -183,7 +183,7 @@ export default function HomePage() {
                   <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-xl bg-gradient-to-b from-slate-950 to-slate-900 border border-slate-800 p-2 flex items-center justify-center shrink-0 relative overflow-hidden group-hover:border-sky-500/50 group-hover:shadow-[0_0_20px_rgba(14,165,233,0.2)] transition-all">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.15),transparent_70%)] pointer-events-none" />
                     <Image
-                      src="/images/products/racing-goggles.png"
+                      src="/images/products/real-product-3-1.jpeg"
                       alt="EGLIDER Anti-Fog Racing Goggles"
                       width={52}
                       height={52}
@@ -214,7 +214,7 @@ export default function HomePage() {
                   <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-xl bg-gradient-to-b from-slate-950 to-slate-900 border border-slate-800 p-2 flex items-center justify-center shrink-0 relative overflow-hidden group-hover:border-sky-500/50 group-hover:shadow-[0_0_20px_rgba(14,165,233,0.2)] transition-all">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.15),transparent_70%)] pointer-events-none" />
                     <Image
-                      src="/images/products/silicon-swim-cap.png"
+                      src="/images/products/real-product-4-1.jpeg"
                       alt="EGLIDER Silicone Swim Cap"
                       width={52}
                       height={52}

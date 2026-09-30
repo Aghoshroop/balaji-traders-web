@@ -50,7 +50,7 @@ export default function ProductQuickViewModal({
   if (!isOpen || !product) return null;
 
   const primaryImage = product.images?.[0] || {
-    src: '/images/products/mens-racing-jammer-black.png',
+    src: '/images/products/real-product-1-1.jpeg',
     alt: product.name,
   };
 

@@ -542,7 +542,7 @@ export default function CategoryDivisions() {
                       </span>
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
                         {catProducts.slice(0, 4).map((p) => {
-                          const thumb = p.images?.[0]?.src || '/images/products/mens-racing-jammer-black.png';
+                          const thumb = p.images?.[0]?.src || '/images/products/real-product-1-1.jpeg';
                           return (
                             <Link
                               key={p.id}

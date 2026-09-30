@@ -3,589 +3,1366 @@ import type { Product } from '@/types';
 /**
  * PRODUCT CATALOG — Balaji Traders
  * =================================
- * Sample products based on verified IndiaMART inventory.
- * UPDATE: Replace placeholder images and descriptions with actual product data.
- *
- * To add a product: copy an existing entry and modify all fields.
- * To remove: delete the object from this array.
- * To change availability: update the 'availability' field.
+ * Real products imported from uploaded images.
  */
 
 export const products: Product[] = [
-  // ========== MEN'S SWIMWEAR ==========
   {
-    id: 'egl-m-jammer-001',
-    slug: 'eglider-mens-racing-jammer-black',
-    name: 'EGLIDER Pro Racing Jammer',
-    brand: 'EGLIDER',
-    category: "Men's Swimwear",
-    categorySlug: 'mens-swimwear',
-    sku: 'EGL-MRJ-001',
-    price: 1200,
-    mrp: 1599,
-    description:
-      'Professional men\'s racing jammer designed for competitive swimming. Streamlined fit provides supportive athletic compression and comfortable movement. Durable polyester blend fabric ensures shape retention through regular training sessions.',
-    shortDescription: 'Professional racing jammer for competitive swimmers.',
-    images: [
-      { src: '/images/products/mens-racing-jammer-black.png', alt: 'EGLIDER Pro Racing Jammer - Black', width: 800, height: 1000 },
+    "id": "prod-1",
+    "slug": "real-product-1",
+    "name": "Product 1",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-001",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 1 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-1-1.jpeg",
+        "alt": "Product 1 Image 1",
+        "width": 800,
+        "height": 1000
+      }
     ],
-    colors: ['Black', 'Navy Blue', 'Black/Red'],
-    sizes: ['26', '28', '30', '32', '34', '36', '38'],
-    material: 'Polyester Blend',
-    features: [
-      'Streamlined athletic cut',
-      'Supportive athletic fit',
-      'Durable pool-grade fabric',
-      'Flatlock seams for comfort',
-      'Internal drawcord',
-      'Knee-length cut',
+    "colors": [
+      "Standard"
     ],
-    availability: 'in-stock',
-    tags: ['racing', 'jammer', 'competition', 'men'],
-    gender: 'men',
-    isFeatured: true,
-    seoTitle: 'EGLIDER Pro Racing Jammer — Men\'s Competition Swimwear | Balaji Traders',
-    seoDescription: 'EGLIDER Pro Racing Jammer. Professional men\'s competition jammer available at Balaji Traders Chennai. Wholesale pricing available.',
-    keywords: ['racing jammer', 'EGLIDER jammer', 'mens competition swimwear', 'swimming jammer'],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": true,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 1 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 1 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
   },
   {
-    id: 'egl-m-brief-001',
-    slug: 'eglider-mens-training-brief',
-    name: 'EGLIDER Training Swim Brief',
-    brand: 'EGLIDER',
-    category: "Men's Swimwear",
-    categorySlug: 'mens-swimwear',
-    sku: 'EGL-MTB-001',
-    price: 450,
-    mrp: 650,
-    description:
-      'Durable men\'s training swim brief designed for everyday pool use. Quality stretch fabric maintains shape through regular pool sessions. Classic brief cut provides maximum freedom of movement for serious swimmers.',
-    shortDescription: 'Durable training brief for daily pool practice.',
-    images: [
-      { src: '/images/products/mens-training-brief.png', alt: 'EGLIDER Training Swim Brief', width: 800, height: 1000 },
+    "id": "prod-2",
+    "slug": "real-product-2",
+    "name": "Product 2",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-002",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 2 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-2-1.jpeg",
+        "alt": "Product 2 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-2-2.jpeg",
+        "alt": "Product 2 Image 2",
+        "width": 800,
+        "height": 1000
+      }
     ],
-    colors: ['Black', 'Navy', 'Royal Blue'],
-    sizes: ['28', '30', '32', '34', '36', '38'],
-    material: 'Durable Polyester Blend',
-    features: [
-      'Durable pool fabric',
-      'Shape retention technology',
-      'Internal drawcord',
-      'Classic brief cut',
-      'Quick-dry material',
+    "colors": [
+      "Standard"
     ],
-    availability: 'in-stock',
-    tags: ['training', 'brief', 'swim brief', 'men'],
-    gender: 'men',
-    seoTitle: 'EGLIDER Training Swim Brief — Men\'s Swimwear | Balaji Traders',
-    seoDescription: 'EGLIDER Training Swim Brief — durable chlorine-resistant men\'s swimwear. Available at Balaji Traders Chennai.',
-    keywords: ['swim brief', 'training swimwear', 'mens swim brief'],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": true,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 2 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 2 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
   },
   {
-    id: 'egl-m-shorts-001',
-    slug: 'eglider-mens-swim-shorts',
-    name: 'EGLIDER Men\'s Swim Shorts',
-    brand: 'EGLIDER',
-    category: "Men's Swimwear",
-    categorySlug: 'mens-swimwear',
-    sku: 'EGL-MSS-001',
-    price: 350,
-    mrp: 500,
-    description:
-      'Comfortable men\'s swimming shorts suitable for recreational swimming and water activities. Quick-dry fabric with secure elastic waistband and internal drawcord. Available in multiple colours.',
-    shortDescription: 'Comfortable swim shorts for recreational and casual swimming.',
-    images: [
-      { src: '/images/products/mens-swim-shorts.png', alt: 'EGLIDER Men\'s Swim Shorts', width: 800, height: 1000 },
+    "id": "prod-3",
+    "slug": "real-product-3",
+    "name": "Product 3",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-003",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 3 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-3-1.jpeg",
+        "alt": "Product 3 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-3-2.jpeg",
+        "alt": "Product 3 Image 2",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-3-3.jpeg",
+        "alt": "Product 3 Image 3",
+        "width": 800,
+        "height": 1000
+      }
     ],
-    colors: ['Black', 'Navy', 'Blue', 'Red'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    material: 'Quick-Dry Polyester',
-    features: [
-      'Quick-dry fabric',
-      'Elastic waistband with drawcord',
-      'Side pockets',
-      'Lightweight construction',
+    "colors": [
+      "Standard"
     ],
-    availability: 'in-stock',
-    tags: ['shorts', 'swim shorts', 'casual', 'men'],
-    gender: 'men',
-    seoTitle: 'EGLIDER Men\'s Swim Shorts | Balaji Traders Chennai',
-    seoDescription: 'EGLIDER Men\'s Swim Shorts — comfortable and quick-dry. Available at Balaji Traders Chennai. Wholesale pricing.',
-    keywords: ['swim shorts', 'mens swimming shorts'],
-  },
-
-  // ========== WOMEN'S SWIMWEAR ==========
-  {
-    id: 'egl-w-racing-001',
-    slug: 'eglider-womens-racing-suit',
-    name: 'EGLIDER Women\'s Racing Kneeskin',
-    brand: 'EGLIDER',
-    category: "Women's Swimwear",
-    categorySlug: 'womens-swimwear',
-    sku: 'EGL-WRK-001',
-    price: 1800,
-    mrp: 2499,
-    description:
-      'Women\'s racing kneeskin designed for competitive swimming. Athletic compression fit provides streamlined performance in the water. Knee-length construction with open back for competitive swim meets.',
-    shortDescription: 'Racing kneeskin for competitive swimming and swim meets.',
-    images: [
-      { src: '/images/products/womens-racing-kneeskin.png', alt: 'EGLIDER Women\'s Racing Kneeskin', width: 800, height: 1000 },
+    "sizes": [
+      "Standard"
     ],
-    colors: ['Black', 'Navy/Cyan', 'Black/Pink'],
-    sizes: ['24', '26', '28', '30', '32', '34'],
-    material: 'Polyester-Spandex Blend',
-    features: [
-      'Streamlined racing cut',
-      'Athletic compression fit',
-      'Knee-length for maximum coverage',
-      'Flatlock seams for comfort',
-      'Supportive ergonomic panels',
-      'Open back design',
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
     ],
-    availability: 'in-stock',
-    tags: ['racing', 'kneeskin', 'competition', 'women'],
-    gender: 'women',
-    isFeatured: true,
-    seoTitle: 'EGLIDER Women\'s Racing Kneeskin — Competition Swimwear | Balaji Traders',
-    seoDescription: 'EGLIDER Women\'s Racing Kneeskin. Professional competition swimwear at Balaji Traders Chennai.',
-    keywords: ['racing kneeskin', 'womens competition swimwear', 'EGLIDER racing suit'],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": true,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 3 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 3 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
   },
   {
-    id: 'egl-w-onepiece-001',
-    slug: 'eglider-womens-training-onepiece',
-    name: 'EGLIDER Women\'s Training One-Piece',
-    brand: 'EGLIDER',
-    category: "Women's Swimwear",
-    categorySlug: 'womens-swimwear',
-    sku: 'EGL-WTO-001',
-    price: 600,
-    mrp: 899,
-    description:
-      'Professional women\'s one-piece training swimsuit built for daily pool use. Resilient fabric with shape retention. Comfortable fit with adequate coverage for serious training sessions.',
-    shortDescription: 'Professional one-piece training suit for daily pool use.',
-    images: [
-      { src: '/images/products/womens-training-onepiece.png', alt: 'EGLIDER Women\'s Training One-Piece', width: 800, height: 1000 },
+    "id": "prod-4",
+    "slug": "real-product-4",
+    "name": "Product 4",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-004",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 4 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-4-1.jpeg",
+        "alt": "Product 4 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-4-2.jpeg",
+        "alt": "Product 4 Image 2",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-4-3.jpeg",
+        "alt": "Product 4 Image 3",
+        "width": 800,
+        "height": 1000
+      }
     ],
-    colors: ['Black', 'Navy', 'Black/Pink', 'Navy/Cyan'],
-    sizes: ['26', '28', '30', '32', '34', '36'],
-    material: 'Polyester-Spandex Blend',
-    features: [
-      'Durable pool-grade fabric',
-      'Shape retention',
-      'Wide straps for comfort',
-      'Modest back design',
-      'Quick-dry material',
+    "colors": [
+      "Standard"
     ],
-    availability: 'in-stock',
-    tags: ['training', 'one-piece', 'swimming costume', 'women'],
-    gender: 'women',
-    seoTitle: 'EGLIDER Women\'s Training One-Piece — Swimming Costume | Balaji Traders',
-    seoDescription: 'EGLIDER Women\'s Training One-Piece swimming costume. Chlorine-resistant and durable. Available wholesale at Balaji Traders Chennai.',
-    keywords: ['womens swimming costume', 'one-piece swimsuit', 'training swimwear'],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": true,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 4 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 4 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
   },
   {
-    id: 'egl-w-costume-001',
-    slug: 'eglider-ladies-swimming-costume',
-    name: 'EGLIDER Ladies Swimming Costume',
-    brand: 'EGLIDER',
-    category: "Women's Swimwear",
-    categorySlug: 'womens-swimwear',
-    sku: 'EGL-WLC-001',
-    price: 500,
-    mrp: 750,
-    description:
-      'Comfortable ladies swimming costume suitable for recreational swimming and water activities. Lycra-blend fabric for a smooth and flexible fit. Ideal for swimming pools and water parks.',
-    shortDescription: 'Comfortable Lycra-blend swimming costume for recreational use.',
-    images: [
-      { src: '/images/products/ladies-swimming-costume.png', alt: 'EGLIDER Ladies Swimming Costume', width: 800, height: 1000 },
+    "id": "prod-5",
+    "slug": "real-product-5",
+    "name": "Product 5",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-005",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 5 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-5-1.jpeg",
+        "alt": "Product 5 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-5-2.jpeg",
+        "alt": "Product 5 Image 2",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-5-3.jpeg",
+        "alt": "Product 5 Image 3",
+        "width": 800,
+        "height": 1000
+      }
     ],
-    colors: ['Black', 'Navy', 'Blue', 'Purple'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    material: 'Lycra Blend',
-    features: [
-      'Lycra-blend fabric',
-      'Comfortable fit',
-      'UV protection',
-      'Quick-dry',
+    "colors": [
+      "Standard"
     ],
-    availability: 'available',
-    tags: ['swimming costume', 'ladies', 'recreational', 'women'],
-    gender: 'women',
-    seoTitle: 'EGLIDER Ladies Swimming Costume | Balaji Traders Chennai',
-    seoDescription: 'EGLIDER Ladies Swimming Costume in Lycra blend. Comfortable and durable. Wholesale at Balaji Traders Chennai.',
-    keywords: ['ladies swimming costume', 'swimming costume Chennai'],
-  },
-
-  // ========== KIDS' SWIMWEAR ==========
-  {
-    id: 'egl-k-boys-001',
-    slug: 'eglider-boys-swim-trunk',
-    name: 'EGLIDER Boys Swim Trunk',
-    brand: 'EGLIDER',
-    category: "Kids' Swimwear",
-    categorySlug: 'kids-swimwear',
-    sku: 'EGL-KBT-001',
-    price: 250,
-    mrp: 400,
-    description:
-      'Durable boys swim trunk for young swimmers. Comfortable elastic waistband with quick-dry fabric. Suitable for swimming lessons, training, and recreational swimming.',
-    shortDescription: 'Durable and comfortable swim trunk for young swimmers.',
-    images: [
-      { src: '/images/products/boys-swim-trunk.png', alt: 'EGLIDER Boys Swim Trunk', width: 800, height: 1000 },
+    "sizes": [
+      "Standard"
     ],
-    colors: ['Black', 'Blue', 'Navy', 'Red'],
-    sizes: ['22', '24', '26', '28', '30'],
-    material: 'Polyester',
-    features: [
-      'Quick-dry fabric',
-      'Elastic waistband',
-      'Comfortable fit for kids',
-      'Durable construction',
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
     ],
-    availability: 'in-stock',
-    tags: ['kids', 'boys', 'swim trunk', 'children'],
-    gender: 'kids',
-    seoTitle: 'EGLIDER Boys Swim Trunk — Kids\' Swimwear | Balaji Traders Chennai',
-    seoDescription: 'EGLIDER Boys Swim Trunk — durable and comfortable kids swimwear. Wholesale at Balaji Traders Chennai.',
-    keywords: ['boys swimwear', 'kids swim trunk', 'children swimming costume'],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": true,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 5 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 5 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
   },
   {
-    id: 'egl-k-girls-001',
-    slug: 'eglider-girls-racing-swimsuit',
-    name: 'EGLIDER Girls Competition Swimsuit',
-    brand: 'EGLIDER',
-    category: "Kids' Swimwear",
-    categorySlug: 'kids-swimwear',
-    sku: 'EGL-KGC-001',
-    price: 550,
-    mrp: 799,
-    description:
-      'Professional-grade girls competition swimsuit designed for young competitive swimmers. Resilient fabric with athletic fit for training and racing. Perfect for swim meets and intensive training.',
-    shortDescription: 'Competition swimsuit for young competitive swimmers.',
-    images: [
-      { src: '/images/products/girls-competition-swimsuit.png', alt: 'EGLIDER Girls Competition Swimsuit', width: 800, height: 1000 },
+    "id": "prod-6",
+    "slug": "real-product-6",
+    "name": "Product 6",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-006",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 6 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-6-1.jpeg",
+        "alt": "Product 6 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-6-2.jpeg",
+        "alt": "Product 6 Image 2",
+        "width": 800,
+        "height": 1000
+      }
     ],
-    colors: ['Black', 'Navy/Pink', 'Black/Cyan'],
-    sizes: ['22', '24', '26', '28', '30', '32'],
-    material: 'Polyester Blend',
-    features: [
-      'Competition-grade construction',
-      'Durable pool fabric',
-      'Athletic fit',
-      'Racerback design',
-      'Flatlock seams',
+    "colors": [
+      "Standard"
     ],
-    availability: 'in-stock',
-    tags: ['kids', 'girls', 'competition', 'racing', 'children'],
-    gender: 'kids',
-    isFeatured: true,
-    seoTitle: 'EGLIDER Girls Competition Swimsuit | Balaji Traders Chennai',
-    seoDescription: 'EGLIDER Girls Competition Swimsuit — professional-grade for young swimmers. Wholesale at Balaji Traders Chennai.',
-    keywords: ['girls competition swimsuit', 'kids racing swimwear'],
-  },
-
-  // ========== COMPETITION SWIMWEAR ==========
-  {
-    id: 'egl-c-elite-001',
-    slug: 'eglider-elite-racing-jammer',
-    name: 'EGLIDER Elite Racing Jammer',
-    brand: 'EGLIDER',
-    category: 'Competition Swimwear',
-    categorySlug: 'competition-swimwear',
-    sku: 'EGL-ERJ-001',
-    price: 2200,
-    mrp: 2999,
-    description:
-      'EGLIDER\'s top-tier racing jammer engineered for competitive swimming. Streamlined athletic construction provides supportive fit and clean profile for race days.',
-    shortDescription: 'Top-tier racing jammer for competitive swimmers.',
-    images: [
-      { src: '/images/products/elite-racing-jammer.png', alt: 'EGLIDER Elite Racing Jammer', width: 800, height: 1000 },
+    "sizes": [
+      "Standard"
     ],
-    colors: ['Black/Cyan', 'Navy/Gold', 'Black'],
-    sizes: ['26', '28', '30', '32', '34', '36'],
-    material: 'High-Density Polyester-Spandex',
-    features: [
-      'Streamlined racing profile',
-      'Athletic race-day fit',
-      'Supportive muscle panels',
-      'Flatlock seam construction',
-      'Anatomical panel design',
-      'Knee-length cut',
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
     ],
-    availability: 'limited',
-    tags: ['elite', 'racing', 'jammer', 'competition', 'performance'],
-    gender: 'men',
-    isFeatured: true,
-    isNewArrival: true,
-    seoTitle: 'EGLIDER Elite Racing Jammer | Balaji Traders Chennai',
-    seoDescription: 'EGLIDER Elite Racing Jammer for competitive swimmers. Premium competition swimwear at Balaji Traders Chennai.',
-    keywords: ['elite racing jammer', 'EGLIDER racing jammer', 'competition jammer'],
-  },
-
-  // ========== ACCESSORIES ==========
-  {
-    id: 'egl-a-goggle-race-001',
-    slug: 'eglider-racing-swimming-goggles',
-    name: 'EGLIDER Racing Swimming Goggles',
-    brand: 'EGLIDER',
-    category: 'Swimming Accessories',
-    categorySlug: 'swimming-accessories',
-    sku: 'EGL-ARG-001',
-    price: 280,
-    mrp: 450,
-    description:
-      'Professional racing swimming goggles with anti-fog coating and UV protection. Low-profile hydrodynamic design minimises drag. Adjustable nose bridge and silicone seal for a secure, comfortable fit.',
-    shortDescription: 'Professional anti-fog racing goggles with UV protection.',
-    images: [
-      { src: '/images/products/racing-goggles.png', alt: 'EGLIDER Racing Swimming Goggles', width: 800, height: 1000 },
+    "availability": "in-stock",
+    "tags": [
+      "product"
     ],
-    colors: ['Clear/Black', 'Blue/Black', 'Smoke/Silver'],
-    sizes: ['One Size', 'Adjustable'],
-    material: 'Polycarbonate Lens, Silicone Seal',
-    features: [
-      'Anti-fog coating',
-      'UV protection',
-      'Low-profile racing design',
-      'Adjustable nose bridge',
-      'Silicone gaskets',
-      'Split strap design',
-    ],
-    availability: 'in-stock',
-    tags: ['goggles', 'racing goggles', 'accessories', 'anti-fog'],
-    gender: 'unisex',
-    isFeatured: true,
-    seoTitle: 'EGLIDER Racing Swimming Goggles — Anti-Fog, UV Protection | Balaji Traders',
-    seoDescription: 'EGLIDER Racing Swimming Goggles with anti-fog and UV protection. Professional swimming goggles at Balaji Traders Chennai.',
-    keywords: ['racing goggles', 'swimming goggles', 'anti-fog goggles'],
+    "gender": "unisex",
+    "isFeatured": true,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 6 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 6 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
   },
   {
-    id: 'egl-a-goggle-jr-001',
-    slug: 'junior-swim-goggles',
-    name: 'Junior Swim Goggles',
-    brand: 'EGLIDER',
-    category: 'Swimming Accessories',
-    categorySlug: 'swimming-accessories',
-    sku: 'EGL-AJG-001',
-    price: 95,
-    mrp: 180,
-    description:
-      'Comfortable junior swimming goggles designed for young swimmers. Anti-fog lenses with soft silicone frame for a gentle fit around children\'s eyes. Easy-adjust strap for quick fitting.',
-    shortDescription: 'Anti-fog junior goggles with soft silicone frame for kids.',
-    images: [
-      { src: '/images/products/junior-goggles.png', alt: 'Junior Swim Goggles', width: 800, height: 1000 },
+    "id": "prod-7",
+    "slug": "real-product-7",
+    "name": "Product 7",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-007",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 7 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-7-1.jpeg",
+        "alt": "Product 7 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-7-2.jpeg",
+        "alt": "Product 7 Image 2",
+        "width": 800,
+        "height": 1000
+      }
     ],
-    colors: ['Blue', 'Pink', 'Clear'],
-    sizes: ['Junior'],
-    material: 'Polycarbonate Lens, Soft Silicone',
-    features: [
-      'Anti-fog lenses',
-      'Soft silicone frame',
-      'Easy-adjust strap',
-      'Junior sizing',
+    "colors": [
+      "Standard"
     ],
-    availability: 'in-stock',
-    tags: ['goggles', 'junior', 'kids', 'accessories'],
-    gender: 'kids',
-    seoTitle: 'Junior Swim Goggles — Kids Swimming Goggles | Balaji Traders',
-    seoDescription: 'Junior Swim Goggles with anti-fog and soft silicone frame. Kids swimming goggles at Balaji Traders Chennai.',
-    keywords: ['junior goggles', 'kids swimming goggles'],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": true,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 7 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 7 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
   },
   {
-    id: 'egl-a-cap-001',
-    slug: 'eglider-silicon-swimming-cap',
-    name: 'EGLIDER Silicon Swimming Cap',
-    brand: 'EGLIDER',
-    category: 'Swimming Accessories',
-    categorySlug: 'swimming-accessories',
-    sku: 'EGL-ASC-001',
-    price: 150,
-    mrp: 250,
-    description:
-      'Premium silicon swimming cap providing excellent fit and durability. Hydrodynamic shape reduces drag. Suitable for training and competition use. Protects hair from chlorine.',
-    shortDescription: 'Premium silicon cap — hydrodynamic, durable, chlorine protection.',
-    images: [
-      { src: '/images/products/silicon-swim-cap.png', alt: 'EGLIDER Silicon Swimming Cap', width: 800, height: 1000 },
+    "id": "prod-8",
+    "slug": "real-product-8",
+    "name": "Product 8",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-008",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 8 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-8-1.jpeg",
+        "alt": "Product 8 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-8-2.jpeg",
+        "alt": "Product 8 Image 2",
+        "width": 800,
+        "height": 1000
+      }
     ],
-    colors: ['Black', 'White', 'Blue', 'Red', 'Pink'],
-    sizes: ['One Size'],
-    material: '100% Premium Silicon',
-    features: [
-      'Premium silicon construction',
-      'Hydrodynamic shape',
-      'Tear-resistant',
-      'Chlorine protection',
-      'Comfortable fit',
+    "colors": [
+      "Standard"
     ],
-    availability: 'in-stock',
-    tags: ['cap', 'swimming cap', 'silicon', 'accessories'],
-    gender: 'unisex',
-    seoTitle: 'EGLIDER Silicon Swimming Cap | Balaji Traders Chennai',
-    seoDescription: 'EGLIDER Silicon Swimming Cap — premium, hydrodynamic, durable. Available wholesale at Balaji Traders Chennai.',
-    keywords: ['swimming cap', 'silicon cap', 'swim cap'],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": true,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 8 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 8 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
   },
   {
-    id: 'egl-a-kickboard-001',
-    slug: 'swimming-kickboard',
-    name: 'Swimming Kickboard',
-    brand: 'EGLIDER',
-    category: 'Swimming Accessories',
-    categorySlug: 'swimming-accessories',
-    sku: 'EGL-AKB-001',
-    price: 400,
-    mrp: 600,
-    description:
-      'Professional EVA foam kickboard for swim training. Lightweight and buoyant design helps swimmers isolate leg technique. Ergonomic shape with rounded edges for comfortable grip during extended training sets.',
-    shortDescription: 'Lightweight EVA foam kickboard for training.',
-    images: [
-      { src: '/images/products/kickboard.png', alt: 'Swimming Kickboard', width: 800, height: 1000 },
+    "id": "prod-9",
+    "slug": "real-product-9",
+    "name": "Product 9",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-009",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 9 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-9-1.jpeg",
+        "alt": "Product 9 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-9-2.jpeg",
+        "alt": "Product 9 Image 2",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-9-3.jpeg",
+        "alt": "Product 9 Image 3",
+        "width": 800,
+        "height": 1000
+      }
     ],
-    colors: ['Blue', 'Yellow', 'Pink'],
-    sizes: ['Standard'],
-    material: 'EVA Foam',
-    features: [
-      'High-density EVA foam',
-      'Lightweight and buoyant',
-      'Ergonomic grip shape',
-      'Rounded edges',
-      'Durable construction',
+    "colors": [
+      "Standard"
     ],
-    availability: 'in-stock',
-    tags: ['kickboard', 'training', 'accessories'],
-    gender: 'unisex',
-    seoTitle: 'Swimming Kickboard — Training Equipment | Balaji Traders Chennai',
-    seoDescription: 'Professional swimming kickboard for training. EVA foam, lightweight. Wholesale at Balaji Traders Chennai.',
-    keywords: ['kickboard', 'swimming training equipment'],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": true,
+    "seoTitle": "Balaji Product 9 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 9 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
   },
   {
-    id: 'egl-a-lifejacket-001',
-    slug: 'safety-life-jacket',
-    name: 'Safety Life Jacket',
-    brand: 'EGLIDER',
-    category: 'Swimming Accessories',
-    categorySlug: 'swimming-accessories',
-    sku: 'EGL-ALJ-001',
-    price: 1000,
-    mrp: 1500,
-    description:
-      'Safety life jacket suitable for water sports and swimming. Adjustable straps for secure fit. High-visibility design with durable buckles. Meets standard safety requirements for water activities.',
-    shortDescription: 'Safety life jacket with adjustable straps and durable buckles.',
-    images: [
-      { src: '/images/products/life-jacket.png', alt: 'Safety Life Jacket', width: 800, height: 1000 },
+    "id": "prod-10",
+    "slug": "real-product-10",
+    "name": "Product 10",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-010",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 10 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-10-1.jpeg",
+        "alt": "Product 10 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-10-2.jpeg",
+        "alt": "Product 10 Image 2",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-10-3.jpeg",
+        "alt": "Product 10 Image 3",
+        "width": 800,
+        "height": 1000
+      }
     ],
-    colors: ['Orange', 'Red', 'Yellow'],
-    sizes: ['S', 'M', 'L', 'XL'],
-    material: 'Nylon Shell, EPE Foam',
-    features: [
-      'High-visibility colours',
-      'Adjustable straps',
-      'Durable quick-release buckles',
-      'EPE foam buoyancy',
-      'Whistle attached',
+    "colors": [
+      "Standard"
     ],
-    availability: 'in-stock',
-    tags: ['life jacket', 'safety', 'water sports', 'accessories'],
-    gender: 'unisex',
-    seoTitle: 'Safety Life Jacket | Balaji Traders Chennai',
-    seoDescription: 'Safety Life Jacket for water sports and swimming. Adjustable, high-visibility. Wholesale at Balaji Traders Chennai.',
-    keywords: ['life jacket', 'safety life jacket', 'water safety'],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": true,
+    "seoTitle": "Balaji Product 10 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 10 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
   },
   {
-    id: 'egl-a-paddle-001',
-    slug: 'swimming-hand-paddles',
-    name: 'Swimming Hand Paddles',
-    brand: 'EGLIDER',
-    category: 'Swimming Accessories',
-    categorySlug: 'swimming-accessories',
-    sku: 'EGL-AHP-001',
-    price: 320,
-    mrp: 500,
-    description:
-      'Ergonomic swimming hand paddles designed to increase stroke power and improve technique. Adjustable rubber tubing for secure fit. Suitable for intermediate to advanced swimmers.',
-    shortDescription: 'Ergonomic hand paddles for stroke power and technique.',
-    images: [
-      { src: '/images/products/hand-paddles.png', alt: 'Swimming Hand Paddles', width: 800, height: 1000 },
+    "id": "prod-11",
+    "slug": "real-product-11",
+    "name": "Product 11",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-011",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 11 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-11-1.jpeg",
+        "alt": "Product 11 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-11-2.jpeg",
+        "alt": "Product 11 Image 2",
+        "width": 800,
+        "height": 1000
+      }
     ],
-    colors: ['Blue', 'Yellow'],
-    sizes: ['S', 'M', 'L'],
-    material: 'Polypropylene',
-    features: [
-      'Ergonomic contoured design',
-      'Adjustable rubber tubing',
-      'Flow-through holes for feel',
-      'Builds stroke strength',
+    "colors": [
+      "Standard"
     ],
-    availability: 'available',
-    tags: ['paddles', 'hand paddles', 'training', 'accessories'],
-    gender: 'unisex',
-    seoTitle: 'Swimming Hand Paddles — Training Equipment | Balaji Traders Chennai',
-    seoDescription: 'Swimming Hand Paddles for stroke power and technique. Wholesale at Balaji Traders Chennai.',
-    keywords: ['hand paddles', 'swimming paddles', 'training equipment'],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": true,
+    "seoTitle": "Balaji Product 11 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 11 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
   },
   {
-    id: 'egl-a-snorkel-001',
-    slug: 'mask-and-snorkel-set',
-    name: 'Mask & Snorkel Set',
-    brand: 'EGLIDER',
-    category: 'Swimming Accessories',
-    categorySlug: 'swimming-accessories',
-    sku: 'EGL-AMS-001',
-    price: 650,
-    mrp: 999,
-    description:
-      'Complete mask and snorkel set for recreational water activities. Tempered glass lens mask with silicone skirt for comfortable seal. Dry-top snorkel prevents water entry. Ideal for snorkelling, pool activities, and water exploration.',
-    shortDescription: 'Complete mask & snorkel set for recreational water activities.',
-    images: [
-      { src: '/images/products/mask-snorkel-set.png', alt: 'Mask & Snorkel Set', width: 800, height: 1000 },
+    "id": "prod-12",
+    "slug": "real-product-12",
+    "name": "Product 12",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-012",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 12 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-12-1.jpeg",
+        "alt": "Product 12 Image 1",
+        "width": 800,
+        "height": 1000
+      }
     ],
-    colors: ['Blue/Clear', 'Black/Clear'],
-    sizes: ['Adult', 'Junior'],
-    material: 'Tempered Glass, Silicone, PVC',
-    features: [
-      'Tempered glass lens',
-      'Silicone mask skirt',
-      'Dry-top snorkel',
-      'Adjustable strap',
-      'Purge valve',
+    "colors": [
+      "Standard"
     ],
-    availability: 'available',
-    tags: ['snorkel', 'mask', 'snorkelling', 'accessories'],
-    gender: 'unisex',
-    seoTitle: 'Mask & Snorkel Set | Balaji Traders Chennai',
-    seoDescription: 'Mask & Snorkel Set for snorkelling and water activities. Wholesale at Balaji Traders Chennai.',
-    keywords: ['mask snorkel set', 'snorkelling equipment'],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": true,
+    "seoTitle": "Balaji Product 12 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 12 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
   },
   {
-    id: 'egl-a-ring-001',
-    slug: 'pvc-swimming-ring',
-    name: 'PVC Swimming Ring',
-    brand: 'EGLIDER',
-    category: 'Swimming Accessories',
-    categorySlug: 'swimming-accessories',
-    sku: 'EGL-ASR-001',
-    price: 180,
-    mrp: 300,
-    description:
-      'Durable PVC swimming ring suitable for recreational use and swimming pool activities. Multiple sizes available for children and adults. Bright colours for high visibility in water.',
-    shortDescription: 'Durable PVC swim ring for recreational use.',
-    images: [
-      { src: '/images/products/swimming-ring.png', alt: 'PVC Swimming Ring', width: 800, height: 1000 },
+    "id": "prod-13",
+    "slug": "real-product-13",
+    "name": "Product 13",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-013",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 13 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-13-1.jpeg",
+        "alt": "Product 13 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-13-2.jpeg",
+        "alt": "Product 13 Image 2",
+        "width": 800,
+        "height": 1000
+      }
     ],
-    colors: ['Blue', 'Orange', 'Pink', 'Green'],
-    sizes: ['Small (60cm)', 'Medium (70cm)', 'Large (80cm)'],
-    material: 'PVC',
-    features: [
-      'Durable PVC construction',
-      'High-visibility colours',
-      'Multiple sizes',
-      'Safety valve',
+    "colors": [
+      "Standard"
     ],
-    availability: 'in-stock',
-    tags: ['swim ring', 'pool toy', 'recreational', 'accessories'],
-    gender: 'unisex',
-    seoTitle: 'PVC Swimming Ring | Balaji Traders Chennai',
-    seoDescription: 'PVC Swimming Ring for pool activities. Multiple sizes. Wholesale at Balaji Traders Chennai.',
-    keywords: ['swimming ring', 'PVC swim ring', 'pool ring'],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": true,
+    "seoTitle": "Balaji Product 13 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 13 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
   },
+  {
+    "id": "prod-14",
+    "slug": "real-product-14",
+    "name": "Product 14",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-014",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 14 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-14-1.jpeg",
+        "alt": "Product 14 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-14-2.jpeg",
+        "alt": "Product 14 Image 2",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-14-3.jpeg",
+        "alt": "Product 14 Image 3",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": true,
+    "seoTitle": "Balaji Product 14 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 14 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-15",
+    "slug": "real-product-15",
+    "name": "Product 15",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-015",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 15 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-15-1.jpeg",
+        "alt": "Product 15 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-15-2.jpeg",
+        "alt": "Product 15 Image 2",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": true,
+    "seoTitle": "Balaji Product 15 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 15 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-16",
+    "slug": "real-product-16",
+    "name": "Product 16",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-016",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 16 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-16-1.jpeg",
+        "alt": "Product 16 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-16-2.jpeg",
+        "alt": "Product 16 Image 2",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": true,
+    "seoTitle": "Balaji Product 16 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 16 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-17",
+    "slug": "real-product-17",
+    "name": "Product 17",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-017",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 17 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-17-1.jpeg",
+        "alt": "Product 17 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-17-2.jpeg",
+        "alt": "Product 17 Image 2",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-17-3.jpeg",
+        "alt": "Product 17 Image 3",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 17 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 17 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-18",
+    "slug": "real-product-18",
+    "name": "Product 18",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-018",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 18 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-18-1.jpeg",
+        "alt": "Product 18 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-18-2.jpeg",
+        "alt": "Product 18 Image 2",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 18 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 18 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-19",
+    "slug": "real-product-19",
+    "name": "Product 19",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-019",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 19 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-19-1.jpeg",
+        "alt": "Product 19 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-19-2.jpeg",
+        "alt": "Product 19 Image 2",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 19 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 19 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-20",
+    "slug": "real-product-20",
+    "name": "Product 20",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-020",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 20 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-20-1.jpeg",
+        "alt": "Product 20 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-20-2.jpeg",
+        "alt": "Product 20 Image 2",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 20 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 20 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-21",
+    "slug": "real-product-21",
+    "name": "Product 21",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-021",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 21 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-21-1.jpeg",
+        "alt": "Product 21 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-21-2.jpeg",
+        "alt": "Product 21 Image 2",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 21 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 21 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-22",
+    "slug": "real-product-22",
+    "name": "Product 22",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-022",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 22 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-22-1.jpeg",
+        "alt": "Product 22 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-22-2.jpeg",
+        "alt": "Product 22 Image 2",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 22 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 22 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-23",
+    "slug": "real-product-23",
+    "name": "Product 23",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-023",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 23 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-23-1.jpeg",
+        "alt": "Product 23 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-23-2.jpeg",
+        "alt": "Product 23 Image 2",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 23 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 23 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-24",
+    "slug": "real-product-24",
+    "name": "Product 24",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-024",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 24 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-24-1.jpeg",
+        "alt": "Product 24 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-24-2.jpeg",
+        "alt": "Product 24 Image 2",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-24-3.jpeg",
+        "alt": "Product 24 Image 3",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 24 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 24 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-25",
+    "slug": "real-product-25",
+    "name": "Product 25",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-025",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 25 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-25-1.jpeg",
+        "alt": "Product 25 Image 1",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 25 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 25 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-26",
+    "slug": "real-product-26",
+    "name": "Product 26",
+    "brand": "Balaji",
+    "category": "General",
+    "categorySlug": "general",
+    "sku": "BLJ-026",
+    "price": 500,
+    "mrp": 750,
+    "description": "High quality product 26 from Balaji Traders.",
+    "shortDescription": "Premium quality product.",
+    "images": [
+      {
+        "src": "/images/products/real-product-26-1.jpeg",
+        "alt": "Product 26 Image 1",
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "src": "/images/products/real-product-26-2.jpeg",
+        "alt": "Product 26 Image 2",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Balaji Product 26 | Balaji Traders",
+    "seoDescription": "Buy Balaji Product 26 at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  }
 ];
 
 // ========== HELPER FUNCTIONS ==========

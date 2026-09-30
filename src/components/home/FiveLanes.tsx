@@ -131,7 +131,7 @@ export default function FiveLanes() {
                   <div className="flex items-center gap-6 sm:gap-8">
                     <div className="w-20 h-24 sm:w-24 sm:h-28 relative group-hover:scale-105 transition-transform">
                       <Image
-                        src="/images/products/mens-racing-jammer-black.png"
+                        src="/images/products/real-product-1-1.jpeg"
                         alt="EGLIDER Racing Jammer"
                         fill
                         className="object-contain drop-shadow-md"
@@ -139,7 +139,7 @@ export default function FiveLanes() {
                     </div>
                     <div className="w-16 h-20 sm:w-20 sm:h-24 relative opacity-80 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
                       <Image
-                        src="/images/products/mens-training-brief.png"
+                        src="/images/products/real-product-5-1.jpeg"
                         alt="EGLIDER Training Brief"
                         fill
                         className="object-contain drop-shadow-sm"
@@ -147,7 +147,7 @@ export default function FiveLanes() {
                     </div>
                     <div className="w-16 h-20 sm:w-20 sm:h-24 relative opacity-70 group-hover:opacity-100 group-hover:translate-x-2 transition-all">
                       <Image
-                        src="/images/products/mens-swim-shorts.png"
+                        src="/images/products/real-product-6-1.jpeg"
                         alt="Swim Shorts"
                         fill
                         className="object-contain drop-shadow-sm"
@@ -205,7 +205,7 @@ export default function FiveLanes() {
                   <div className="flex items-center gap-5 sm:gap-8 bg-slate-50/80 border border-slate-100 rounded-2xl px-5 py-3 group-hover:border-sky-200 transition-colors">
                     <div className="w-20 h-24 sm:w-24 sm:h-28 relative group-hover:scale-105 transition-transform">
                       <Image
-                        src="/images/products/womens-racing-kneeskin.png"
+                        src="/images/products/real-product-2-1.jpeg"
                         alt="Racing Kneeskin"
                         fill
                         className="object-contain drop-shadow-md"
@@ -214,7 +214,7 @@ export default function FiveLanes() {
                     <div className="h-16 w-px bg-slate-200" />
                     <div className="w-20 h-24 sm:w-24 sm:h-28 relative group-hover:scale-105 transition-transform">
                       <Image
-                        src="/images/products/womens-training-onepiece.png"
+                        src="/images/products/real-product-7-1.jpeg"
                         alt="Training One-Piece"
                         fill
                         className="object-contain drop-shadow-md"
@@ -272,7 +272,7 @@ export default function FiveLanes() {
                   <div className="relative flex items-center gap-4">
                     <div className="w-18 h-22 sm:w-20 sm:h-26 relative group-hover:rotate-1 transition-transform">
                       <Image
-                        src="/images/products/girls-competition-swimsuit.png"
+                        src="/images/products/real-product-8-1.jpeg"
                         alt="Girls Competition Swimsuit"
                         fill
                         className="object-contain drop-shadow-md"
@@ -280,7 +280,7 @@ export default function FiveLanes() {
                     </div>
                     <div className="w-16 h-20 sm:w-18 sm:h-22 relative -ml-2 group-hover:-rotate-2 transition-transform">
                       <Image
-                        src="/images/products/boys-swim-trunk.png"
+                        src="/images/products/real-product-9-1.jpeg"
                         alt="Boys Swim Trunk"
                         fill
                         className="object-contain drop-shadow-md"
@@ -338,7 +338,7 @@ export default function FiveLanes() {
                   <div className="flex items-center gap-6 bg-slate-950 text-white rounded-2xl px-6 py-3 border border-slate-800 group-hover:border-sky-500/50 transition-colors">
                     <div className="w-20 h-24 sm:w-24 sm:h-28 relative group-hover:scale-105 transition-transform">
                       <Image
-                        src="/images/products/elite-racing-jammer.png"
+                        src="/images/products/real-product-10-1.jpeg"
                         alt="Elite Racing Jammer"
                         fill
                         className="object-contain drop-shadow-md"
@@ -346,7 +346,7 @@ export default function FiveLanes() {
                     </div>
                     <div className="w-16 h-16 sm:w-20 sm:h-20 relative group-hover:scale-105 transition-transform">
                       <Image
-                        src="/images/products/racing-goggles.png"
+                        src="/images/products/real-product-3-1.jpeg"
                         alt="Anti-Fog Racing Goggles"
                         fill
                         className="object-contain drop-shadow-md"
@@ -403,7 +403,7 @@ export default function FiveLanes() {
                 <div className="flex-1 flex items-center justify-start lg:justify-center gap-4 sm:gap-6 py-1">
                   <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-slate-50 border border-slate-200/80 p-1 relative flex items-center justify-center group-hover:scale-105 transition-transform">
                     <Image
-                      src="/images/products/silicon-swim-cap.png"
+                      src="/images/products/real-product-4-1.jpeg"
                       alt="Silicone Cap"
                       fill
                       className="object-contain p-1"
@@ -411,7 +411,7 @@ export default function FiveLanes() {
                   </div>
                   <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-slate-50 border border-slate-200/80 p-1 relative flex items-center justify-center group-hover:scale-105 transition-transform">
                     <Image
-                      src="/images/products/silicone-cap.png"
+                      src="/images/products/real-product-11-1.jpeg"
                       alt="Competition Cap"
                       fill
                       className="object-contain p-1"
@@ -419,7 +419,7 @@ export default function FiveLanes() {
                   </div>
                   <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-slate-50 border border-slate-200/80 p-1 relative flex items-center justify-center group-hover:scale-105 transition-transform">
                     <Image
-                      src="/images/products/racing-goggles.png"
+                      src="/images/products/real-product-3-2.jpeg"
                       alt="Racing Optics"
                       fill
                       className="object-contain p-1"

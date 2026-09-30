@@ -631,7 +631,7 @@ export default function ProductsPage() {
                 </thead>
                 <tbody className="divide-y divide-slate-100 text-xs">
                   {filteredProducts.map((p, idx) => {
-                    const thumb = p.images?.[0]?.src || '/images/products/mens-racing-jammer-black.png';
+                    const thumb = p.images?.[0]?.src || '/images/products/real-product-1-1.jpeg';
                     return (
                       <tr
                         key={p.id}
