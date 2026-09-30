@@ -71,21 +71,21 @@ export default function ProductCard({
             />
           </div>
 
-          <div className="p-1.5 min-[400px]:p-2 flex flex-col flex-1 justify-between bg-white">
+          <div className="p-2 min-[400px]:p-3 flex flex-col flex-1 justify-between bg-white">
             <div
               onClick={() => onQuickView?.(product)}
               className="cursor-pointer"
             >
-              <span className="technical-mono text-[8px] font-bold text-sky-700 block truncate">
+              <span className="technical-mono text-[9px] min-[400px]:text-[10px] font-bold text-sky-700 block truncate">
                 {product.brand}
               </span>
-              <h4 className="font-bold text-slate-950 text-[11px] leading-tight line-clamp-1 uppercase group-hover:text-sky-600 transition-colors mt-0.5">
+              <h4 className="font-bold text-slate-950 text-[11px] min-[400px]:text-xs leading-tight line-clamp-2 uppercase group-hover:text-sky-600 transition-colors mt-0.5">
                 {product.name}
               </h4>
             </div>
 
-            <div className="pt-1 mt-1 border-t border-slate-100 flex items-center justify-between gap-1">
-              <span className="text-[11px] font-black text-slate-950 truncate">
+            <div className="pt-2 mt-2 border-t border-slate-100 flex items-center justify-between gap-1">
+              <span className="text-xs min-[400px]:text-sm font-black text-slate-950 truncate">
                 {product.price ? formatPrice(product.price) : 'Wholesale'}
               </span>
 
@@ -97,10 +97,10 @@ export default function ProductCard({
                   e.stopPropagation();
                   trackWhatsAppClick('compact-card', product.id, product.name);
                 }}
-                className="w-5 h-5 rounded-full bg-[#22c55e] hover:bg-[#16a34a] text-white flex items-center justify-center shrink-0 shadow-2xs"
+                className="w-7 h-7 rounded-full bg-[#22c55e] hover:bg-[#16a34a] text-white flex items-center justify-center shrink-0 shadow-sm"
                 aria-label={`WhatsApp Enquiry for ${product.name}`}
               >
-                <MessageCircle className="w-2.5 h-2.5" />
+                <MessageCircle className="w-3.5 h-3.5" />
               </a>
             </div>
           </div>

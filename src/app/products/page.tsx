@@ -67,7 +67,7 @@ export default function ProductsPage() {
   const [sortBy, setSortBy] = useState('featured');
   const [showFilters, setShowFilters] = useState(false);
   const [viewMode, setViewMode] = useState<'rhythm' | 'index'>('rhythm');
-  const [mobileGridCols, setMobileGridCols] = useState<1 | 3>(1);
+  const [mobileGridCols, setMobileGridCols] = useState<1 | 2>(2);
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
 
   // Filter and sort products
@@ -286,17 +286,17 @@ export default function ProductsPage() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => setMobileGridCols(3)}
+                  onClick={() => setMobileGridCols(2)}
                   className={`flex items-center gap-1 px-2 py-1.5 rounded-lg text-[10px] font-black technical-mono transition-all ${
-                    mobileGridCols === 3
+                    mobileGridCols === 2
                       ? 'bg-slate-950 text-white shadow-xs'
                       : 'text-slate-500 hover:text-slate-900'
                   }`}
-                  title="3 Products in a Row"
-                  aria-label="3 Products in a Row"
+                  title="2 Products in a Row"
+                  aria-label="2 Products in a Row"
                 >
-                  <Grid3X3 className="w-3 h-3" />
-                  <span>3</span>
+                  <LayoutGrid className="w-3 h-3" />
+                  <span>2</span>
                 </button>
               </div>
 
@@ -547,8 +547,8 @@ export default function ProductsPage() {
             /* DYNAMIC GRID: Mobile can be 1 or 3 in a row! Desktop is standard sm:2 lg:3 xl:4 */
             <div
               className={`grid items-stretch w-full min-w-0 max-w-full ${
-                mobileGridCols === 3
-                  ? 'grid-cols-3 gap-1.5 min-[400px]:gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-6'
+                mobileGridCols === 2
+                  ? 'grid-cols-2 gap-2 min-[400px]:gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-6'
                   : 'grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-6'
               }`}
             >
@@ -556,7 +556,7 @@ export default function ProductsPage() {
                 <ProductCard
                   key={product.id}
                   product={product}
-                  density={mobileGridCols === 3 ? 'compact' : 'standard'}
+                  density={mobileGridCols === 2 ? 'compact' : 'standard'}
                   onQuickView={(p) => setQuickViewProduct(p)}
                 />
               ))}
