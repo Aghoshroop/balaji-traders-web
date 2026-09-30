@@ -22,6 +22,7 @@ export default function ProductDetailPage() {
   const slug = params.slug as string;
   const product = getProductBySlug(slug);
   const [enquiryOpen, setEnquiryOpen] = useState(false);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   if (!product) {
     return (
@@ -44,10 +45,10 @@ export default function ProductDetailPage() {
     .filter((p) => p.id !== product.id)
     .slice(0, 4);
 
-  const primaryImage = product.images?.[0] || {
-    src: '/images/products/real-product-1-1.jpeg',
-    alt: product.name,
-  };
+  const images = product.images || [
+    { src: '/images/products/real-product-1-1.jpeg', alt: product.name }
+  ];
+  const primaryImage = images[activeImageIndex] || images[0];
 
   return (
     <>
@@ -91,22 +92,38 @@ export default function ProductDetailPage() {
                       className="object-contain filter drop-shadow-[0_20px_40px_rgba(15,23,42,0.18)]"
                     />
                   </div>
-                  {/* Floating water shadow beneath product */}
-                  <div className="w-3/4 h-5 water-shadow rounded-full mx-auto mt-4 opacity-75" />
-                </div>
+                {/* Floating water shadow beneath product */}
+                <div className="w-3/4 h-5 water-shadow rounded-full mx-auto mt-4 opacity-75" />
+              </div>
 
-                <div className="absolute top-4 right-4 z-10">
-                  <AvailabilityBadge status={product.availability} size="md" />
-                </div>
-
-                {/* Sub-label watermark */}
-                <div className="absolute bottom-4 left-6 z-10">
-                  <span className="technical-mono text-[9px] text-slate-400 block font-bold">
-                    CHENNAI STOCK · {product.sku}
-                  </span>
-                </div>
+              <div className="absolute top-4 right-4 z-10">
+                <AvailabilityBadge status={product.availability} size="md" />
               </div>
             </div>
+
+            {/* Thumbnail Gallery */}
+            {images.length > 1 && (
+              <div className="flex items-center gap-3 mt-4 overflow-x-auto pb-2 scrollbar-hide">
+                {images.map((img, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setActiveImageIndex(idx)}
+                    className={`relative w-20 h-20 shrink-0 rounded-xl overflow-hidden border-2 transition-all ${
+                      activeImageIndex === idx ? 'border-sky-500 shadow-md scale-105' : 'border-slate-200 hover:border-sky-300 opacity-70 hover:opacity-100'
+                    }`}
+                  >
+                    <Image
+                      src={img.src}
+                      alt={img.alt || `${product.name} thumbnail ${idx + 1}`}
+                      fill
+                      sizes="80px"
+                      className="object-contain bg-slate-50 p-2"
+                    />
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
 
             {/* Right: Campaign Details & Primary Direct Conversion (6 cols) */}
             <div className="lg:col-span-6 flex flex-col justify-center">
