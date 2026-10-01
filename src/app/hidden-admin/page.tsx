@@ -88,37 +88,33 @@ export default function HiddenAdminPanel() {
     setUploadingImage(true);
     
     try {
-      const safeName = file.name.replace(/[^a-z0-9.]/gi, '-').toLowerCase();
-      const newFileName = `${Date.now()}-${safeName}`;
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await fetch('/api/admin/upload', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error('Upload failed on server');
+      }
+
+      const data = await response.json();
       
-      const storageRef = ref(storage, `products/${newFileName}`);
-      const uploadTask = uploadBytesResumable(storageRef, file);
+      if (editingProduct) {
+        setEditingProduct({
+          ...editingProduct,
+          images: [{ src: data.url, alt: editingProduct.name || 'Product Image', width: 800, height: 1000 }]
+        });
+      }
       
-      uploadTask.on(
-        'state_changed',
-        (snapshot) => {
-          // Can add progress bar here later
-        },
-        (error) => {
-          console.error("Upload failed", error);
-          setUploadingImage(false);
-          showFeedback('Upload failed');
-        },
-        async () => {
-          const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
-          if (editingProduct) {
-            setEditingProduct({
-              ...editingProduct,
-              images: [{ src: downloadURL, alt: editingProduct.name || 'Product Image', width: 800, height: 1000 }]
-            });
-          }
-          setUploadingImage(false);
-        }
-      );
+      showFeedback('Upload successful');
     } catch (err) {
       console.error('Upload error', err);
-      setUploadingImage(false);
       showFeedback('Upload error');
+    } finally {
+      setUploadingImage(false);
     }
   };
 
