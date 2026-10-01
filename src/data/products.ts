@@ -1191,7 +1191,7 @@ export const products: Product[] = [
     "shortDescription": "Premium quality product.",
     "images": [
       {
-        "src": "/images/products/real-product-27-1.jpeg",
+        "src": "/images/products/real-product-27-1-v2.jpeg",
         "alt": "Product 27",
         "width": 800,
         "height": 1000
@@ -1236,7 +1236,7 @@ export const products: Product[] = [
     "shortDescription": "Premium quality product.",
     "images": [
       {
-        "src": "/images/products/real-product-28-1.jpeg",
+        "src": "/images/products/real-product-28-1-v2.jpeg",
         "alt": "Product 28",
         "width": 800,
         "height": 1000
@@ -1281,7 +1281,7 @@ export const products: Product[] = [
     "shortDescription": "Premium quality product.",
     "images": [
       {
-        "src": "/images/products/real-product-29-1.jpeg",
+        "src": "/images/products/real-product-29-1-v2.jpeg",
         "alt": "Product 29",
         "width": 800,
         "height": 1000
@@ -1326,7 +1326,7 @@ export const products: Product[] = [
     "shortDescription": "Premium quality product.",
     "images": [
       {
-        "src": "/images/products/real-product-30-1.jpeg",
+        "src": "/images/products/real-product-30-1-v2.jpeg",
         "alt": "Product 30",
         "width": 800,
         "height": 1000
@@ -1371,7 +1371,7 @@ export const products: Product[] = [
     "shortDescription": "Premium quality product.",
     "images": [
       {
-        "src": "/images/products/real-product-31-1.jpeg",
+        "src": "/images/products/real-product-31-1-v2.jpeg",
         "alt": "Product 31",
         "width": 800,
         "height": 1000
@@ -1416,7 +1416,7 @@ export const products: Product[] = [
     "shortDescription": "Premium quality product.",
     "images": [
       {
-        "src": "/images/products/real-product-32-1.jpeg",
+        "src": "/images/products/real-product-32-1-v2.jpeg",
         "alt": "Product 32",
         "width": 800,
         "height": 1000
@@ -1461,7 +1461,7 @@ export const products: Product[] = [
     "shortDescription": "Premium quality product.",
     "images": [
       {
-        "src": "/images/products/real-product-33-1.jpeg",
+        "src": "/images/products/real-product-33-1-v2.jpeg",
         "alt": "Product 33",
         "width": 800,
         "height": 1000
@@ -1506,7 +1506,7 @@ export const products: Product[] = [
     "shortDescription": "Premium quality product.",
     "images": [
       {
-        "src": "/images/products/real-product-34-1.jpeg",
+        "src": "/images/products/real-product-34-1-v2.jpeg",
         "alt": "Product 34",
         "width": 800,
         "height": 1000
@@ -1551,7 +1551,7 @@ export const products: Product[] = [
     "shortDescription": "Premium quality product.",
     "images": [
       {
-        "src": "/images/products/real-product-35-1.jpeg",
+        "src": "/images/products/real-product-35-1-v2.jpeg",
         "alt": "Product 35",
         "width": 800,
         "height": 1000
@@ -1596,7 +1596,7 @@ export const products: Product[] = [
     "shortDescription": "Premium quality product.",
     "images": [
       {
-        "src": "/images/products/real-product-36-1.jpeg",
+        "src": "/images/products/real-product-36-1-v2.jpeg",
         "alt": "Product 36",
         "width": 800,
         "height": 1000
@@ -1641,7 +1641,7 @@ export const products: Product[] = [
     "shortDescription": "Premium quality product.",
     "images": [
       {
-        "src": "/images/products/real-product-37-1.jpeg",
+        "src": "/images/products/real-product-37-1-v2.jpeg",
         "alt": "Product 37",
         "width": 800,
         "height": 1000
@@ -1686,7 +1686,7 @@ export const products: Product[] = [
     "shortDescription": "Premium quality product.",
     "images": [
       {
-        "src": "/images/products/real-product-38-1.jpeg",
+        "src": "/images/products/real-product-38-1-v2.jpeg",
         "alt": "Product 38",
         "width": 800,
         "height": 1000
@@ -1731,7 +1731,7 @@ export const products: Product[] = [
     "shortDescription": "Premium quality product.",
     "images": [
       {
-        "src": "/images/products/real-product-39-1.jpeg",
+        "src": "/images/products/real-product-39-1-v2.jpeg",
         "alt": "Product 39",
         "width": 800,
         "height": 1000
@@ -1776,7 +1776,7 @@ export const products: Product[] = [
     "shortDescription": "Premium quality product.",
     "images": [
       {
-        "src": "/images/products/real-product-40-1.jpeg",
+        "src": "/images/products/real-product-40-1-v2.jpeg",
         "alt": "Product 40",
         "width": 800,
         "height": 1000
@@ -1821,7 +1821,7 @@ export const products: Product[] = [
     "shortDescription": "Premium quality product.",
     "images": [
       {
-        "src": "/images/products/real-product-41-1.jpeg",
+        "src": "/images/products/real-product-41-1-v2.jpeg",
         "alt": "Product 41",
         "width": 800,
         "height": 1000
