@@ -1,6 +1,3 @@
-'use client';
-
-import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { MessageCircle, ArrowLeft, CheckCircle2 } from 'lucide-react';
@@ -9,10 +6,30 @@ import { getProductsByCategory } from '@/data/products';
 import ProductCard from '@/components/products/ProductCard';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { getGeneralWhatsAppUrl } from '@/lib/whatsapp';
+import type { Metadata } from 'next';
 
-export default function CategoryPage() {
-  const params = useParams();
-  const slug = params.slug as string;
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const category = getCategoryBySlug(slug);
+
+  if (!category) {
+    return {
+      title: 'Division Not Found',
+    };
+  }
+
+  return {
+    title: category.name,
+    description: category.description,
+  };
+}
+
+export default async function CategoryPage({ params }: Props) {
+  const { slug } = await params;
   const category = getCategoryBySlug(slug);
   const categoryProducts = await getProductsByCategory(slug);
   const divisionIndex = categories.findIndex((c) => c.slug === slug);

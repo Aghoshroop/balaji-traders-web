@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import SmoothScrollProvider from '@/components/layout/SmoothScrollProvider';
 import AppLayout from '@/components/layout/AppLayout';
@@ -63,8 +64,9 @@ export default function RootLayout({
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
         {/* Synchronous preloader detector: runs before body is painted to eliminate flash of content */}
-        <script
+        <Script
           id="splash-preloader-detector"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
