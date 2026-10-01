@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, MessageCircle, Sparkles, CheckCircle2, ChevronRight } from 'lucide-react';
 import { categories } from '@/data/categories';
-import { products } from '@/data/products';
+import { getAllProducts } from '@/data/products';
 import { BUSINESS } from '@/lib/config';
 import { formatPrice } from '@/lib/utils';
 import { getGeneralWhatsAppUrl } from '@/lib/whatsapp';
@@ -77,7 +77,7 @@ const divisionMeta: Record<
   },
 };
 
-export default function CategoryDivisions() {
+export default async function CategoryDivisions() {
   const [activeTab, setActiveTab] = useState<string>('all');
 
   const displayedCategories =

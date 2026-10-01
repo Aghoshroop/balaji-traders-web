@@ -2,7 +2,10 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { Plus, Edit2, Trash2, Save, X, ImagePlus, Loader2, ArrowLeft, RefreshCw, CheckCircle2 } from 'lucide-react';
+import { Plus, Trash2, Save, ArrowLeft, RefreshCw, CheckCircle2, ImagePlus, Loader2 } from 'lucide-react';
+import { db, storage } from '@/lib/firebase';
+import { collection, getDocs, doc, setDoc, deleteDoc, updateDoc } from 'firebase/firestore';
+import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import type { Product } from '@/types';
 
 export default function HiddenAdminPanel() {
@@ -23,11 +26,15 @@ export default function HiddenAdminPanel() {
   const fetchProducts = async () => {
     setLoading(true);
     try {
-      const res = await fetch('/api/admin/products');
-      const data = await res.json();
+      const snapshot = await getDocs(collection(db, 'products'));
+      const data: Product[] = [];
+      snapshot.forEach(doc => data.push({ id: doc.id, ...doc.data() } as Product));
+      // Sort by ID
+      data.sort((a, b) => parseInt(a.id.replace('prod-', '')) - parseInt(b.id.replace('prod-', '')));
       setProducts(data);
-    } catch (err) {
+    } catch (err: any) {
       console.error('Failed to load products', err);
+      showFeedback('Error fetching products. Check Firebase Rules.');
     } finally {
       setLoading(false);
     }
@@ -65,11 +72,12 @@ export default function HiddenAdminPanel() {
     if (!confirm('Are you sure you want to delete this product?')) return;
     
     try {
-      await fetch(`/api/admin/products?id=${id}`, { method: 'DELETE' });
+      await deleteDoc(doc(db, 'products', id));
       setProducts(products.filter(p => p.id !== id));
       showFeedback('Product deleted');
-    } catch (err) {
+    } catch (err: any) {
       console.error('Failed to delete', err);
+      showFeedback('Delete failed. Check Firebase rules.');
     }
   };
 
@@ -77,28 +85,40 @@ export default function HiddenAdminPanel() {
     if (!e.target.files || e.target.files.length === 0) return;
     
     const file = e.target.files[0];
-    const formData = new FormData();
-    formData.append('file', file);
-    
     setUploadingImage(true);
+    
     try {
-      const res = await fetch('/api/admin/upload', {
-        method: 'POST',
-        body: formData,
-      });
-      const data = await res.json();
+      const safeName = file.name.replace(/[^a-z0-9.]/gi, '-').toLowerCase();
+      const newFileName = `${Date.now()}-${safeName}`;
       
-      if (data.success && editingProduct) {
-        setEditingProduct({
-          ...editingProduct,
-          images: [{ src: data.url, alt: editingProduct.name || 'Product Image', width: 800, height: 1000 }]
-        });
-      }
+      const storageRef = ref(storage, `products/${newFileName}`);
+      const uploadTask = uploadBytesResumable(storageRef, file);
+      
+      uploadTask.on(
+        'state_changed',
+        (snapshot) => {
+          // Can add progress bar here later
+        },
+        (error) => {
+          console.error("Upload failed", error);
+          setUploadingImage(false);
+          showFeedback('Upload failed');
+        },
+        async () => {
+          const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
+          if (editingProduct) {
+            setEditingProduct({
+              ...editingProduct,
+              images: [{ src: downloadURL, alt: editingProduct.name || 'Product Image', width: 800, height: 1000 }]
+            });
+          }
+          setUploadingImage(false);
+        }
+      );
     } catch (err) {
-      console.error('Upload failed', err);
-      alert('Image upload failed');
-    } finally {
+      console.error('Upload error', err);
       setUploadingImage(false);
+      showFeedback('Upload error');
     }
   };
 
@@ -111,25 +131,38 @@ export default function HiddenAdminPanel() {
     setSaving(true);
     try {
       const isNew = !editingProduct.id;
-      const res = await fetch('/api/admin/products', {
-        method: isNew ? 'POST' : 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(editingProduct),
-      });
+      let finalProduct = { ...editingProduct };
       
-      const savedProduct = await res.json();
-      
+      // Auto-generate ID if new
       if (isNew) {
-        setProducts([...products, savedProduct]);
-      } else {
-        setProducts(products.map(p => p.id === savedProduct.id ? savedProduct : p));
+        const maxId = products.reduce((max, p) => {
+          const num = parseInt(p.id.replace('prod-', ''), 10);
+          return isNaN(num) ? max : Math.max(max, num);
+        }, 0);
+        finalProduct.id = `prod-${maxId + 1}`;
       }
       
-      showFeedback('Product saved successfully!');
+      // Auto-generate slug
+      if (!finalProduct.slug) {
+        finalProduct.slug = finalProduct.name?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+      }
+      if (!finalProduct.categorySlug && finalProduct.category) {
+        finalProduct.categorySlug = finalProduct.category.toLowerCase();
+      }
+
+      await setDoc(doc(db, 'products', finalProduct.id as string), finalProduct);
+      
+      if (isNew) {
+        setProducts([...products, finalProduct as Product]);
+      } else {
+        setProducts(products.map(p => p.id === finalProduct.id ? (finalProduct as Product) : p));
+      }
+      
+      showFeedback('Product saved to Firebase!');
       setView('list');
     } catch (err) {
       console.error('Failed to save', err);
-      alert('Failed to save product');
+      showFeedback('Save failed. Check Firebase rules.');
     } finally {
       setSaving(false);
     }
@@ -149,10 +182,10 @@ export default function HiddenAdminPanel() {
         <>
           {/* Header */}
           <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-slate-200 p-4 flex items-center justify-between">
-            <h1 className="text-xl font-black uppercase tracking-tight">Inventory</h1>
+            <h1 className="text-xl font-black uppercase tracking-tight text-slate-800">Firebase CMS</h1>
             <button 
               onClick={fetchProducts}
-              className="w-10 h-10 flex items-center justify-center bg-slate-100 rounded-full hover:bg-slate-200"
+              className="w-10 h-10 flex items-center justify-center bg-slate-100 text-slate-600 rounded-full hover:bg-slate-200"
             >
               <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
             </button>
@@ -161,7 +194,18 @@ export default function HiddenAdminPanel() {
           {/* List */}
           <div className="p-4 space-y-3">
             {loading ? (
-              <div className="flex justify-center p-10"><Loader2 className="w-8 h-8 animate-spin text-sky-500" /></div>
+              <div className="flex flex-col items-center justify-center p-10 gap-2">
+                <Loader2 className="w-8 h-8 animate-spin text-sky-500" />
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Connecting to Firebase...</span>
+              </div>
+            ) : products.length === 0 ? (
+              <div className="flex flex-col items-center justify-center p-10 text-center gap-3">
+                <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mb-2">
+                  <DatabaseIcon className="w-8 h-8 text-slate-300" />
+                </div>
+                <h3 className="font-bold text-slate-800">Database is Empty</h3>
+                <p className="text-sm text-slate-500">Check your Firebase security rules, or tap + to add your first product.</p>
+              </div>
             ) : (
               products.map((p) => (
                 <div 
@@ -178,10 +222,10 @@ export default function HiddenAdminPanel() {
                   </div>
                   
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-bold text-sm truncate">{p.name}</h3>
+                    <h3 className="font-bold text-sm text-slate-800 truncate">{p.name}</h3>
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-xs font-black text-sky-600">₹{p.price}</span>
-                      <span className="text-[10px] text-slate-400 font-mono">{p.sku}</span>
+                      <span className="text-[10px] text-slate-400 font-mono">{p.sku || p.id}</span>
                     </div>
                   </div>
                   
@@ -199,7 +243,7 @@ export default function HiddenAdminPanel() {
           {/* Floating Action Button */}
           <button
             onClick={handleAddNew}
-            className="fixed bottom-6 right-6 w-14 h-14 bg-slate-900 text-white rounded-full shadow-xl shadow-slate-900/20 flex items-center justify-center hover:scale-105 active:scale-95 transition-transform z-40"
+            className="fixed bottom-6 right-6 w-14 h-14 bg-sky-500 text-white rounded-full shadow-xl shadow-sky-500/30 flex items-center justify-center hover:scale-105 active:scale-95 transition-transform z-40"
           >
             <Plus className="w-6 h-6" />
           </button>
@@ -209,11 +253,11 @@ export default function HiddenAdminPanel() {
       {view === 'editor' && editingProduct && (
         <div className="bg-white min-h-screen pb-32">
           {/* Editor Header */}
-          <div className="sticky top-0 z-30 bg-white border-b border-slate-100 p-4 flex items-center gap-3">
-            <button onClick={() => setView('list')} className="w-10 h-10 flex items-center justify-center bg-slate-100 rounded-full">
+          <div className="sticky top-0 z-30 bg-white border-b border-slate-100 p-4 flex items-center gap-3 shadow-sm">
+            <button onClick={() => setView('list')} className="w-10 h-10 flex items-center justify-center bg-slate-100 text-slate-600 rounded-full">
               <ArrowLeft className="w-5 h-5" />
             </button>
-            <h1 className="text-lg font-black uppercase flex-1">{editingProduct.id ? 'Edit Product' : 'New Product'}</h1>
+            <h1 className="text-lg font-black uppercase text-slate-800 flex-1">{editingProduct.id ? 'Edit Product' : 'New Product'}</h1>
           </div>
 
           <div className="p-4 space-y-6 max-w-lg mx-auto">
@@ -241,7 +285,7 @@ export default function HiddenAdminPanel() {
                 ) : uploadingImage ? (
                   <div className="flex flex-col items-center text-sky-600 gap-2">
                     <Loader2 className="w-8 h-8 animate-spin" />
-                    <span className="text-xs font-bold uppercase tracking-wider">Uploading...</span>
+                    <span className="text-xs font-bold uppercase tracking-wider">Uploading to Cloud...</span>
                   </div>
                 ) : (
                   <div className="flex flex-col items-center text-slate-400 gap-2">
@@ -299,14 +343,15 @@ export default function HiddenAdminPanel() {
                   </select>
                 </div>
                 <div className="space-y-1">
-                  <label className="text-[10px] font-black uppercase text-slate-400 ml-1">SKU</label>
-                  <input 
-                    type="text" 
-                    value={editingProduct.sku || ''}
-                    onChange={(e) => setEditingProduct({...editingProduct, sku: e.target.value})}
-                    className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 font-mono text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
-                    placeholder="e.g. BLJ-001"
-                  />
+                  <label className="text-[10px] font-black uppercase text-slate-400 ml-1">Category</label>
+                  <select 
+                    value={editingProduct.category || ''}
+                    onChange={(e) => setEditingProduct({...editingProduct, category: e.target.value})}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                  >
+                    <option value="Swimwear">Swimwear</option>
+                    <option value="Accessories">Accessories</option>
+                  </select>
                 </div>
               </div>
 
@@ -334,7 +379,7 @@ export default function HiddenAdminPanel() {
             <button 
               onClick={handleSave}
               disabled={saving}
-              className="flex-[2] py-4 font-black uppercase tracking-widest text-white bg-slate-900 rounded-2xl flex items-center justify-center gap-2 shadow-lg shadow-slate-900/20 active:scale-95 transition-transform"
+              className="flex-[2] py-4 font-black uppercase tracking-widest text-white bg-sky-500 rounded-2xl flex items-center justify-center gap-2 shadow-lg shadow-sky-500/30 active:scale-95 transition-transform"
             >
               {saving ? <Loader2 className="w-5 h-5 animate-spin" /> : <Save className="w-5 h-5" />}
               {saving ? 'Saving...' : 'Save Product'}
@@ -343,5 +388,26 @@ export default function HiddenAdminPanel() {
         </div>
       )}
     </div>
+  );
+}
+
+function DatabaseIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <ellipse cx="12" cy="5" rx="9" ry="3" />
+      <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+      <path d="M3 12A9 3 0 0 0 21 12" />
+    </svg>
   );
 }

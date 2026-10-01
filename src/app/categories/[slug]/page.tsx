@@ -14,7 +14,7 @@ export default function CategoryPage() {
   const params = useParams();
   const slug = params.slug as string;
   const category = getCategoryBySlug(slug);
-  const categoryProducts = getProductsByCategory(slug);
+  const categoryProducts = await getProductsByCategory(slug);
   const divisionIndex = categories.findIndex((c) => c.slug === slug);
   const divisionNum = divisionIndex !== -1 ? String(divisionIndex + 1).padStart(2, '0') : '01';
 

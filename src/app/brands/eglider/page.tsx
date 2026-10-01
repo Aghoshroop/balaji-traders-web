@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 export default function EgliderPage() {
-  const egliderProducts = getProductsByBrand('EGLIDER');
+  const egliderProducts = await getProductsByBrand('EGLIDER');
 
   const divisions = [
     {

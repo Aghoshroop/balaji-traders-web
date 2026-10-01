@@ -20,7 +20,7 @@ import { getProductSchema } from '@/lib/schema';
 export default function ProductDetailPage() {
   const params = useParams();
   const slug = params.slug as string;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
   const [enquiryOpen, setEnquiryOpen] = useState(false);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
@@ -41,7 +41,7 @@ export default function ProductDetailPage() {
     );
   }
 
-  const relatedProducts = getProductsByCategory(product.categorySlug)
+  const relatedProducts = await getProductsByCategory(product.categorySlug)
     .filter((p) => p.id !== product.id)
     .slice(0, 4);
 

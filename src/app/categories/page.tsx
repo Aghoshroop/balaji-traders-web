@@ -3,7 +3,7 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import { ArrowRight, MessageCircle, CheckCircle2 } from 'lucide-react';
 import { categories } from '@/data/categories';
-import { products } from '@/data/products';
+import { getAllProducts } from '@/data/products';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import ProductCard from '@/components/products/ProductCard';
 import { getGeneralWhatsAppUrl } from '@/lib/whatsapp';
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: 'Explore the 5 specialist swimwear departments of Balaji Traders: Men\'s, Women\'s, Junior Academy, Competition tech suits, and aquatic accessories available wholesale.',
 };
 
-export default function CategoriesPage() {
+export default async function CategoriesPage() {
   return (
     <div className="min-h-screen bg-slate-50/60 pt-20">
       {/* Header */}

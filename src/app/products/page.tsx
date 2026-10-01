@@ -21,7 +21,7 @@ import {
   Square,
   Grid3X3,
 } from 'lucide-react';
-import { products } from '@/data/products';
+import { getAllProducts } from '@/data/products';
 import { categories } from '@/data/categories';
 import { BUSINESS, CONTACT } from '@/lib/config';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
@@ -57,7 +57,7 @@ const popularSearches = [
   'Kneeskin',
 ];
 
-export default function ProductsPage() {
+export default async function ProductsPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedBrand, setSelectedBrand] = useState('');

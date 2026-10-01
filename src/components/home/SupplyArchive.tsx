@@ -16,7 +16,7 @@ import {
   Square,
   Grid3X3,
 } from 'lucide-react';
-import { products } from '@/data/products';
+import { getAllProducts } from '@/data/products';
 import { categories } from '@/data/categories';
 import { BUSINESS, CONTACT } from '@/lib/config';
 import ProductCard from '@/components/products/ProductCard';
@@ -27,7 +27,7 @@ import { trackWhatsAppClick } from '@/lib/analytics';
 import type { Product } from '@/types';
 
 const departmentFilters = [
-  { label: 'ALL GEAR', value: 'all', count: products.length },
+  { label: 'ALL GEAR', value: 'all', count: (await getAllProducts()).length },
   { label: "MEN'S RACING", value: 'mens-swimwear', count: products.filter((p) => p.categorySlug === 'mens-swimwear').length },
   { label: "WOMEN'S AQUATICS", value: 'womens-swimwear', count: products.filter((p) => p.categorySlug === 'womens-swimwear').length },
   { label: 'JUNIOR SQUAD', value: 'kids-swimwear', count: products.filter((p) => p.categorySlug === 'kids-swimwear').length },
@@ -35,7 +35,7 @@ const departmentFilters = [
   { label: 'OPTICS & ACCESSORIES', value: 'swimming-accessories', count: products.filter((p) => p.categorySlug === 'swimming-accessories').length },
 ];
 
-export default function SupplyArchive() {
+export default async function SupplyArchive() {
   const [selectedDepartment, setSelectedDepartment] = useState<string>('all');
   const [mobileGridCols, setMobileGridCols] = useState<1 | 2>(2);
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);

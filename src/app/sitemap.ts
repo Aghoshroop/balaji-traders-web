@@ -1,9 +1,9 @@
 import type { MetadataRoute } from 'next';
 import { SEO } from '@/lib/config';
-import { products } from '@/data/products';
+import { getAllProducts } from '@/data/products';
 import { categories } from '@/data/categories';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SEO.siteUrl;
 
   // Static pages
