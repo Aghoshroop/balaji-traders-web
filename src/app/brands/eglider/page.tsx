@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   description:
     'EGLIDER brand room distributed by Balaji Traders Chennai. Professional racing suits, training swimwear, goggles, and silicone caps. Direct wholesale supply.',
 };
-
-export default function EgliderPage() {
+export const dynamic = 'force-dynamic';
+export default async function EgliderPage() {
   const egliderProducts = await getProductsByBrand('EGLIDER');
 
   const divisions = [

@@ -16,7 +16,6 @@ import {
   Square,
   Grid3X3,
 } from 'lucide-react';
-import { getAllProducts } from '@/data/products';
 import { categories } from '@/data/categories';
 import { BUSINESS, CONTACT } from '@/lib/config';
 import ProductCard from '@/components/products/ProductCard';
@@ -26,16 +25,16 @@ import { getGeneralWhatsAppUrl, getPhoneUrl } from '@/lib/whatsapp';
 import { trackWhatsAppClick } from '@/lib/analytics';
 import type { Product } from '@/types';
 
-const departmentFilters = [
-  { label: 'ALL GEAR', value: 'all', count: (await getAllProducts()).length },
-  { label: "MEN'S RACING", value: 'mens-swimwear', count: products.filter((p) => p.categorySlug === 'mens-swimwear').length },
-  { label: "WOMEN'S AQUATICS", value: 'womens-swimwear', count: products.filter((p) => p.categorySlug === 'womens-swimwear').length },
-  { label: 'JUNIOR SQUAD', value: 'kids-swimwear', count: products.filter((p) => p.categorySlug === 'kids-swimwear').length },
-  { label: 'COMPETITION', value: 'competition-swimwear', count: products.filter((p) => p.categorySlug === 'competition-swimwear').length },
-  { label: 'OPTICS & ACCESSORIES', value: 'swimming-accessories', count: products.filter((p) => p.categorySlug === 'swimming-accessories').length },
-];
+export default function SupplyArchive({ products }: { products: Product[] }) {
+  const departmentFilters = useMemo(() => [
+    { label: 'ALL GEAR', value: 'all', count: products.length },
+    { label: "MEN'S RACING", value: 'mens-swimwear', count: products.filter((p) => p.categorySlug === 'mens-swimwear').length },
+    { label: "WOMEN'S AQUATICS", value: 'womens-swimwear', count: products.filter((p) => p.categorySlug === 'womens-swimwear').length },
+    { label: 'JUNIOR SQUAD', value: 'kids-swimwear', count: products.filter((p) => p.categorySlug === 'kids-swimwear').length },
+    { label: 'COMPETITION', value: 'competition-swimwear', count: products.filter((p) => p.categorySlug === 'competition-swimwear').length },
+    { label: 'OPTICS & ACCESSORIES', value: 'swimming-accessories', count: products.filter((p) => p.categorySlug === 'swimming-accessories').length },
+  ], [products]);
 
-export default async function SupplyArchive() {
   const [selectedDepartment, setSelectedDepartment] = useState<string>('all');
   const [mobileGridCols, setMobileGridCols] = useState<1 | 2>(2);
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
@@ -46,7 +45,7 @@ export default async function SupplyArchive() {
       return products.slice(0, 9);
     }
     return products.filter((p) => p.categorySlug === selectedDepartment);
-  }, [selectedDepartment]);
+  }, [selectedDepartment, products]);
 
   return (
     <section className="relative w-full bg-transparent py-12 sm:py-16 lg:py-20 border-t border-slate-200/90 overflow-hidden">

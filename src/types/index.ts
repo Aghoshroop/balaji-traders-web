@@ -53,6 +53,7 @@ export interface Product {
   gender: 'men' | 'women' | 'kids' | 'unisex';
   isFeatured?: boolean;
   isNewArrival?: boolean;
+  isHardcodedUntouched?: boolean;
   seoTitle: string;
   seoDescription: string;
   keywords: string[];

@@ -143,16 +143,16 @@ export default function ProductDetailClient({
 
               {/* Price Callout - Clean & Bold */}
               <div className="flex items-end gap-3 mb-8">
-                {product.price ? (
+                {!product.isHardcodedUntouched && product.price ? (
                   <>
                     <span className="text-4xl font-black text-slate-900 tracking-tight">{formatPrice(product.price)}</span>
                     <span className="text-sm text-slate-500 font-medium mb-1 uppercase tracking-wider">
-                      / Wholesale
+                      / Wholesale & Retail
                     </span>
                   </>
                 ) : (
                   <span className="text-lg font-bold text-sky-600 uppercase tracking-wide">
-                    Request Pricing
+                    Price on Request
                   </span>
                 )}
               </div>

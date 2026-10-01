@@ -2,6 +2,8 @@ import { getAllProducts } from '@/data/products';
 import ProductsClient from './ProductsClient';
 import type { Metadata } from 'next';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Collection',
   description: 'Explore our complete warehouse catalog of swimming apparel and equipment.',

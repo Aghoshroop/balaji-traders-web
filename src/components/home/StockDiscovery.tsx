@@ -3,11 +3,13 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { Search, ArrowRight, ArrowUpRight } from 'lucide-react';
-import { getAllProducts } from '@/data/products';
+
 import { categories } from '@/data/categories';
 import ProductCard from '@/components/products/ProductCard';
 
-export default async function StockDiscovery() {
+import type { Product } from '@/types';
+
+export default function StockDiscovery({ products }: { products: Product[] }) {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
@@ -30,7 +32,7 @@ export default async function StockDiscovery() {
     }
 
     return result.slice(0, 6);
-  }, [selectedCategory, searchQuery]);
+  }, [selectedCategory, searchQuery, products]);
 
   return (
     <div className="w-full">
@@ -49,7 +51,7 @@ export default async function StockDiscovery() {
             All Stock ({products.length})
           </button>
           {categories.map((cat) => {
-            const count = (await getAllProducts()).filter((p) => p.categorySlug === cat.slug).length;
+            const count = products.filter((p) => p.categorySlug === cat.slug).length;
             return (
               <button
                 key={cat.id}

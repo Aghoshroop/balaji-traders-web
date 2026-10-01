@@ -28,12 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export async function generateStaticParams() {
-  const products = await getAllProducts();
-  return products.map((product) => ({
-    slug: product.slug,
-  }));
-}
+export const dynamic = 'force-dynamic';
 
 export default async function ProductDetailPage({ params }: Props) {
   const { slug } = await params;

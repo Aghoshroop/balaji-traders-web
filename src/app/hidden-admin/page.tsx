@@ -2,13 +2,22 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { Plus, Trash2, Save, ArrowLeft, RefreshCw, CheckCircle2, ImagePlus, Loader2 } from 'lucide-react';
-import { db, storage } from '@/lib/firebase';
+import { Plus, Trash2, Save, ArrowLeft, RefreshCw, CheckCircle2, ImagePlus, Loader2, LogOut, Pencil } from 'lucide-react';
+import { db, storage, auth } from '@/lib/firebase';
 import { collection, getDocs, doc, setDoc, deleteDoc, updateDoc } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import { signInWithEmailAndPassword, onAuthStateChanged, signOut, User } from 'firebase/auth';
 import type { Product } from '@/types';
 
 export default function HiddenAdminPanel() {
+  // Auth State
+  const [user, setUser] = useState<User | null>(null);
+  const [authLoading, setAuthLoading] = useState(true);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [authError, setAuthError] = useState('');
+
+  // Admin State
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [view, setView] = useState<'list' | 'editor'>('list');
@@ -20,8 +29,29 @@ export default function HiddenAdminPanel() {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    fetchProducts();
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setAuthLoading(false);
+      if (currentUser) {
+        fetchProducts();
+      }
+    });
+    return () => unsubscribe();
   }, []);
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setAuthError('');
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+    } catch (error: any) {
+      setAuthError(error.message || 'Failed to login');
+    }
+  };
+
+  const handleLogout = async () => {
+    await signOut(auth);
+  };
 
   const fetchProducts = async () => {
     setLoading(true);
@@ -70,7 +100,9 @@ export default function HiddenAdminPanel() {
     if (!confirm('Are you sure you want to delete this product?')) return;
     
     try {
-      await deleteDoc(doc(db, 'products', id));
+      // Instead of deleting the document, we mark it as deleted.
+      // This ensures that even if it's a hardcoded product, it gets overridden and hidden.
+      await setDoc(doc(db, 'products', id), { isDeleted: true }, { merge: true });
       setProducts(products.filter(p => p.id !== id));
       showFeedback('Product deleted');
     } catch (err: any) {
@@ -162,6 +194,66 @@ export default function HiddenAdminPanel() {
     }
   };
 
+  if (authLoading) {
+    return (
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
+        <div className="flex flex-col items-center justify-center space-y-4">
+          <Loader2 className="w-8 h-8 text-sky-500 animate-spin" />
+          <span className="technical-mono text-xs font-bold text-slate-500">AUTHENTICATING...</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
+        <div className="bg-white border border-slate-200 rounded-3xl p-8 w-full max-w-md shadow-2xs">
+          <div className="text-center mb-8">
+            <h1 className="text-2xl font-black uppercase tracking-tight text-slate-900">Admin Login</h1>
+            <p className="text-xs text-slate-500 mt-2 technical-mono">SECURE WAREHOUSE PORTAL</p>
+          </div>
+          
+          <form onSubmit={handleLogin} className="space-y-4">
+            {authError && (
+              <div className="p-3 bg-red-50 text-red-600 text-xs font-bold rounded-xl border border-red-100">
+                {authError}
+              </div>
+            )}
+            <div>
+              <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase technical-mono">Email Address</label>
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium focus:bg-white focus:border-sky-500 focus:outline-none transition-colors"
+                placeholder="admin@balajitraders.com"
+              />
+            </div>
+            <div>
+              <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase technical-mono">Password</label>
+              <input
+                type="password"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium focus:bg-white focus:border-sky-500 focus:outline-none transition-colors"
+                placeholder="••••••••"
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full py-3.5 bg-slate-950 hover:bg-sky-600 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors shadow-md mt-6"
+            >
+              Access Portal
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 pb-20 font-sans selection:bg-sky-200">
       {/* Toast Feedback */}
@@ -177,12 +269,22 @@ export default function HiddenAdminPanel() {
           {/* Header */}
           <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-slate-200 p-4 flex items-center justify-between">
             <h1 className="text-xl font-black uppercase tracking-tight text-slate-800">Firebase CMS</h1>
-            <button 
-              onClick={fetchProducts}
-              className="w-10 h-10 flex items-center justify-center bg-slate-100 text-slate-600 rounded-full hover:bg-slate-200"
-            >
-              <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
-            </button>
+            <div className="flex items-center gap-2">
+              <button 
+                onClick={fetchProducts}
+                className="w-10 h-10 flex items-center justify-center bg-slate-100 text-slate-600 rounded-full hover:bg-slate-200"
+                title="Refresh"
+              >
+                <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
+              </button>
+              <button 
+                onClick={handleLogout}
+                className="w-10 h-10 flex items-center justify-center bg-red-50 text-red-600 rounded-full hover:bg-red-100"
+                title="Logout"
+              >
+                <LogOut className="w-4 h-4" />
+              </button>
+            </div>
           </div>
           
           {/* List */}
@@ -223,12 +325,22 @@ export default function HiddenAdminPanel() {
                     </div>
                   </div>
                   
-                  <button 
-                    onClick={(e) => handleDelete(p.id, e)}
-                    className="w-10 h-10 flex items-center justify-center bg-red-50 text-red-500 rounded-full shrink-0"
-                  >
-                    <Trash2 className="w-4 h-4" />
-                  </button>
+                  <div className="flex gap-2 shrink-0">
+                    <button 
+                      onClick={(e) => { e.stopPropagation(); handleEdit(p); }}
+                      className="w-10 h-10 flex items-center justify-center bg-sky-50 text-sky-600 hover:bg-sky-100 transition-colors rounded-full"
+                      title="Edit Product"
+                    >
+                      <Pencil className="w-4 h-4" />
+                    </button>
+                    <button 
+                      onClick={(e) => handleDelete(p.id, e)}
+                      className="w-10 h-10 flex items-center justify-center bg-red-50 text-red-500 hover:bg-red-100 transition-colors rounded-full"
+                      title="Delete Product"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  </div>
                 </div>
               ))
             )}

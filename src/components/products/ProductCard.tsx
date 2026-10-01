@@ -26,9 +26,12 @@ export default function ProductCard({
     alt: product.name,
   };
 
+  const displayPrice = product.isHardcodedUntouched ? 0 : product.price;
+  const displayMrp = product.isHardcodedUntouched ? 0 : product.mrp;
+
   const discountPercent =
-    product.mrp && product.price && product.mrp > product.price
-      ? Math.round(((product.mrp - product.price) / product.mrp) * 100)
+    displayMrp && displayPrice && displayMrp > displayPrice
+      ? Math.round(((displayMrp - displayPrice) / displayMrp) * 100)
       : null;
 
   // =========================================================================
@@ -87,7 +90,7 @@ export default function ProductCard({
 
             <div className="pt-2 mt-2 border-t border-slate-100 flex items-center justify-between gap-1">
               <span className="text-sm min-[400px]:text-base font-black text-slate-950 truncate">
-                {product.price ? formatPrice(product.price) : 'Wholesale'}
+                {displayPrice ? formatPrice(displayPrice) : 'Price on Request'}
               </span>
 
               <a
@@ -216,17 +219,19 @@ export default function ProductCard({
               <div>
                 <div className="flex items-baseline gap-1.5">
                   <span className="text-lg font-black text-slate-950 leading-none">
-                    {formatPrice(product.price || 0)}
+                    {displayPrice ? formatPrice(displayPrice) : 'Price on Request'}
                   </span>
-                  {product.mrp && product.mrp > (product.price || 0) && (
+                  {displayMrp && displayPrice && displayMrp > displayPrice && (
                     <span className="text-[11px] text-slate-400 line-through">
-                      ₹{product.mrp}
+                      ₹{displayMrp}
                     </span>
                   )}
                 </div>
-                <span className="technical-mono text-[9px] font-bold text-slate-400 uppercase block mt-0.5">
-                  WHOLESALE LOT
-                </span>
+                {displayPrice > 0 && (
+                  <span className="technical-mono text-[9px] font-bold text-slate-400 uppercase block mt-0.5">
+                    Wholesale & Retail
+                  </span>
+                )}
               </div>
 
               <div className="flex items-center gap-1.5">
@@ -373,27 +378,26 @@ export default function ProductCard({
           </div>
         </div>
 
-        {/* Pricing & Actions */}
         <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
           <div>
-            {product.price ? (
+            {displayPrice ? (
               <div>
                 <div className="flex items-baseline gap-1.5">
                   <span className="text-base sm:text-lg font-black text-slate-950 leading-none">
-                    {formatPrice(product.price)}
+                    {formatPrice(displayPrice)}
                   </span>
-                  {product.mrp && product.mrp > product.price && (
+                  {displayMrp && displayMrp > displayPrice && (
                     <span className="text-[11px] text-slate-400 line-through">
-                      ₹{product.mrp}
+                      ₹{displayMrp}
                     </span>
                   )}
                 </div>
                 <span className="technical-mono text-[8px] sm:text-[9px] font-bold text-slate-400 uppercase block mt-0.5">
-                  WHOLESALE LOT
+                  Wholesale & Retail
                 </span>
               </div>
             ) : (
-              <span className="text-xs font-bold text-slate-600">Wholesale Lot</span>
+              <span className="text-xs font-bold text-slate-600">Price on Request</span>
             )}
           </div>
 

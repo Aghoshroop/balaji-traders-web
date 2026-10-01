@@ -23,12 +23,16 @@ export async function getAllProducts(): Promise<Product[]> {
   
   // 1. Add all hardcoded products
   hardcodedProducts.forEach((p: any) => {
-    mergedMap.set(p.id, p);
+    mergedMap.set(p.id, { ...p, isHardcodedUntouched: true });
   });
   
   // 2. Add/Override with Firebase products
-  firebaseProducts.forEach((p) => {
-    mergedMap.set(p.id, p);
+  firebaseProducts.forEach((p: any) => {
+    if (p.isDeleted) {
+      mergedMap.delete(p.id); // Remove it if it was a hardcoded product marked as deleted
+    } else {
+      mergedMap.set(p.id, p);
+    }
   });
   
   const finalProducts = Array.from(mergedMap.values());

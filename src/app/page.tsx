@@ -10,6 +10,8 @@ import DistributionMap from '@/components/home/DistributionMap';
 import AquaticWaveRays from '@/components/ui/aquatic/AquaticWaveRays';
 import { getFAQSchema } from '@/lib/schema';
 
+export const dynamic = 'force-dynamic';
+
 const homeFaqs = [
   {
     question: 'Where is Balaji Traders located?',
@@ -33,7 +35,10 @@ const homeFaqs = [
   },
 ];
 
-export default function HomePage() {
+import { getAllProducts } from '@/data/products';
+
+export default async function HomePage() {
+  const products = await getAllProducts();
   return (
     <>
       {/* Structured Data for FAQs */}
@@ -50,12 +55,12 @@ export default function HomePage() {
       {/* ================================================================ */}
       {/* SCENE 02 — SPECIALIST WHOLESALE DIVISIONS (BENTO SHOWROOM)       */}
       {/* ================================================================ */}
-      <CategoryDivisions />
+      <CategoryDivisions products={products} />
 
       {/* ================================================================ */}
       {/* SCENE 03 — THE SUPPLY ARCHIVE: SIGNATURE SHOWROOM EXPERIENCE     */}
       {/* ================================================================ */}
-      <SupplyArchive />
+      <SupplyArchive products={products} />
 
       {/* ================================================================ */}
       {/* SCENE 04 — THE BRAND ROOM: EGLIDER TAKEOVER                      */}

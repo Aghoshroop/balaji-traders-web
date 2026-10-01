@@ -13,7 +13,10 @@ export const metadata: Metadata = {
   description: 'Explore the 5 specialist swimwear departments of Balaji Traders: Men\'s, Women\'s, Junior Academy, Competition tech suits, and aquatic accessories available wholesale.',
 };
 
+export const dynamic = 'force-dynamic';
+
 export default async function CategoriesPage() {
+  const products = await getAllProducts();
   return (
     <div className="min-h-screen bg-slate-50/60 pt-20">
       {/* Header */}

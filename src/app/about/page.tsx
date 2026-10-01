@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { MessageCircle, ArrowRight, Phone } from 'lucide-react';
 import { BUSINESS, CONTACT, BRANDS } from '@/lib/config';
-import { products } from '@/data/products';
+import { getAllProducts } from '@/data/products';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import PoolLaneSpine from '@/components/ui/aquatic/PoolLaneSpine';
 import { getGeneralWhatsAppUrl, getPhoneUrl } from '@/lib/whatsapp';
@@ -12,7 +12,10 @@ export const metadata: Metadata = {
   description: `Wholesale swimwear distribution since 2001. Supplying swimming costumes, racing wear, and swimming accessories from Otteri, Chennai, Tamil Nadu.`,
 };
 
-export default function AboutPage() {
+export const dynamic = 'force-dynamic';
+
+export default async function AboutPage() {
+  const products = await getAllProducts();
   return (
     <div className="min-h-screen bg-[#ffffff] pt-20">
       {/* Top Breadcrumb */}

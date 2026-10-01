@@ -97,7 +97,7 @@ export function getProductSchema(product: Product) {
       name: product.brand,
     },
     category: product.category,
-    ...(product.price
+    ...(!product.isHardcodedUntouched && product.price
       ? {
           offers: {
             '@type': 'Offer',
