@@ -37,7 +37,7 @@ const departmentFilters = [
 
 export default function SupplyArchive() {
   const [selectedDepartment, setSelectedDepartment] = useState<string>('all');
-  const [mobileGridCols, setMobileGridCols] = useState<1 | 3>(3);
+  const [mobileGridCols, setMobileGridCols] = useState<1 | 2>(2);
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
 
   const displayedProducts = useMemo(() => {
@@ -103,7 +103,7 @@ export default function SupplyArchive() {
               </div>
             </div>
 
-            {/* Mobile Density Switcher: [ 1 ] vs [ 3 ] */}
+            {/* Mobile Density Switcher: [ 1 ] vs [ 2 ] */}
             <div className="block sm:hidden flex items-center bg-slate-100 p-0.5 rounded-xl border border-slate-200 shrink-0 self-start">
               <button
                 type="button"
@@ -121,30 +121,30 @@ export default function SupplyArchive() {
               </button>
               <button
                 type="button"
-                onClick={() => setMobileGridCols(3)}
+                onClick={() => setMobileGridCols(2)}
                 className={`flex items-center gap-1 px-2 py-1.5 rounded-lg text-[10px] font-black technical-mono transition-all ${
-                  mobileGridCols === 3
+                  mobileGridCols === 2
                     ? 'bg-slate-950 text-white shadow-xs'
                     : 'text-slate-500 hover:text-slate-900'
                 }`}
-                title="3 Products in a Row"
-                aria-label="3 Products in a Row"
+                title="2 Products in a Row"
+                aria-label="2 Products in a Row"
               >
                 <Grid3X3 className="w-3 h-3" />
-                <span>3</span>
+                <span>2</span>
               </button>
             </div>
           </div>
         </div>
 
         {/* ============================================================ */}
-        {/* 2. SHOWROOM PRODUCT GRID (3 IN A ROW ON DESKTOP)             */}
+        {/* 2. SHOWROOM PRODUCT GRID                                     */}
         {/* ============================================================ */}
         <div className="mt-8 sm:mt-10">
           <div
             className={`grid items-stretch w-full min-w-0 max-w-full ${
-              mobileGridCols === 3
-                ? 'grid-cols-3 gap-1.5 min-[400px]:gap-2 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6'
+              mobileGridCols === 2
+                ? 'grid-cols-2 gap-3 min-[400px]:gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6'
                 : 'grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6'
             }`}
           >
@@ -152,7 +152,7 @@ export default function SupplyArchive() {
               <ProductCard
                 key={product.id}
                 product={product}
-                density={mobileGridCols === 3 ? 'compact' : 'standard'}
+                density={mobileGridCols === 2 ? 'compact' : 'standard'}
                 onQuickView={(p) => setQuickViewProduct(p)}
               />
             ))}

@@ -37,30 +37,31 @@ export default function ProductCard({
   if (density === 'compact') {
     return (
       <div className="group showroom-card rounded-xl sm:rounded-3xl overflow-hidden flex flex-col h-full bg-white border border-slate-200/90 shadow-2xs hover:border-sky-400 hover:shadow-md transition-all duration-300 w-full min-w-0 max-w-full">
-        {/* Compact Mobile Presentation (Visible only on screens < 640px) */}
+        {/* Compact Mobile Presentation (2-columns on mobile) */}
         <div className="block sm:hidden flex flex-col h-full justify-between">
           <div
             onClick={() => onQuickView?.(product)}
-            className="cursor-pointer block relative aspect-square bg-gradient-to-b from-slate-50 via-sky-50/20 to-white p-2.5 flex items-center justify-center border-b border-slate-100 overflow-hidden"
+            className="cursor-pointer block relative aspect-square bg-gradient-to-tr from-slate-100 via-white to-sky-50 p-3 sm:p-4 flex items-center justify-center border-b border-slate-100 overflow-hidden group"
           >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(240,249,255,0.6),transparent_70%)] pointer-events-none" />
             <div className="relative w-full h-full flex items-center justify-center">
               <Image
                 src={primaryImage.src}
                 alt={product.name}
                 fill
-                sizes="120px"
-                className="object-contain filter drop-shadow-[0_6px_12px_rgba(15,23,42,0.1)] group-hover:scale-108 transition-transform duration-300"
+                sizes="(max-width: 640px) 50vw, 250px"
+                className="object-contain filter drop-shadow-[0_10px_20px_rgba(15,23,42,0.1)] group-hover:scale-105 transition-transform duration-300 mix-blend-multiply"
               />
             </div>
 
             {/* Micro Badge */}
             {discountPercent && (
-              <span className="absolute top-1 left-1 px-1 py-0.2 text-[8px] font-black bg-emerald-600 text-white rounded">
+              <span className="absolute top-1.5 left-1.5 px-1.5 py-0.5 text-[9px] font-black bg-emerald-600 text-white rounded shadow-xs">
                 -{discountPercent}%
               </span>
             )}
             <span
-              className={`absolute top-1 right-1 w-2 h-2 rounded-full ${
+              className={`absolute top-2 right-2 w-2 h-2 rounded-full ${
                 product.availability === 'in-stock'
                   ? 'bg-emerald-500'
                   : product.availability === 'limited'
@@ -71,7 +72,7 @@ export default function ProductCard({
             />
           </div>
 
-          <div className="p-2 min-[400px]:p-3 flex flex-col flex-1 justify-between bg-white">
+          <div className="p-3 flex flex-col flex-1 justify-between bg-white">
             <div
               onClick={() => onQuickView?.(product)}
               className="cursor-pointer"
@@ -79,13 +80,13 @@ export default function ProductCard({
               <span className="technical-mono text-[9px] min-[400px]:text-[10px] font-bold text-sky-700 block truncate">
                 {product.brand}
               </span>
-              <h4 className="font-bold text-slate-950 text-[11px] min-[400px]:text-xs leading-tight line-clamp-2 uppercase group-hover:text-sky-600 transition-colors mt-0.5">
+              <h4 className="font-bold text-slate-950 text-xs min-[400px]:text-sm leading-tight line-clamp-2 uppercase group-hover:text-sky-600 transition-colors mt-1">
                 {product.name}
               </h4>
             </div>
 
             <div className="pt-2 mt-2 border-t border-slate-100 flex items-center justify-between gap-1">
-              <span className="text-xs min-[400px]:text-sm font-black text-slate-950 truncate">
+              <span className="text-sm min-[400px]:text-base font-black text-slate-950 truncate">
                 {product.price ? formatPrice(product.price) : 'Wholesale'}
               </span>
 
@@ -97,10 +98,10 @@ export default function ProductCard({
                   e.stopPropagation();
                   trackWhatsAppClick('compact-card', product.id, product.name);
                 }}
-                className="w-7 h-7 rounded-full bg-[#22c55e] hover:bg-[#16a34a] text-white flex items-center justify-center shrink-0 shadow-sm"
+                className="w-8 h-8 rounded-full bg-[#22c55e] hover:bg-[#16a34a] text-white flex items-center justify-center shrink-0 shadow-sm transition-transform hover:scale-105"
                 aria-label={`WhatsApp Enquiry for ${product.name}`}
               >
-                <MessageCircle className="w-3.5 h-3.5" />
+                <MessageCircle className="w-4 h-4" />
               </a>
             </div>
           </div>
