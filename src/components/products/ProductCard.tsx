@@ -41,16 +41,16 @@ export default function ProductCard({
         <div className="block sm:hidden flex flex-col h-full justify-between">
           <div
             onClick={() => onQuickView?.(product)}
-            className="cursor-pointer block relative aspect-square bg-white p-3 sm:p-4 flex items-center justify-center overflow-hidden group"
+            className="cursor-pointer block relative aspect-square bg-slate-100 overflow-hidden group"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(240,249,255,0.4),transparent_70%)] pointer-events-none" />
-            <div className="relative w-full h-full flex items-center justify-center">
+            <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/5 transition-colors z-10 pointer-events-none" />
+            <div className="relative w-full h-full">
               <Image
                 src={primaryImage.src}
                 alt={product.name}
                 fill
                 sizes="(max-width: 640px) 50vw, 250px"
-                className="object-contain filter drop-shadow-[0_10px_20px_rgba(15,23,42,0.1)] group-hover:scale-105 transition-transform duration-300"
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
             </div>
 
@@ -263,11 +263,11 @@ export default function ProductCard({
   return (
     <div className="group showroom-card rounded-2xl sm:rounded-3xl overflow-hidden flex flex-col h-full bg-white border border-slate-200/80 shadow-[0_2px_12px_rgba(15,23,42,0.04)] hover:border-sky-400/80 hover:shadow-[0_20px_35px_rgba(14,165,233,0.14)] transition-all duration-500 w-full min-w-0 max-w-full">
       {/* Product Image Stage: Clean Aquatic Studio Environment */}
-      <div className="relative aspect-[4/3] sm:aspect-[4/5] overflow-hidden bg-white p-6 sm:p-8 flex items-center justify-center">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(240,249,255,0.5),transparent_70%)] pointer-events-none" />
+      <div className="relative aspect-[4/3] sm:aspect-[4/5] overflow-hidden bg-slate-100">
+        <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/5 transition-colors z-10 pointer-events-none" />
         <Link
           href={`/products/${product.slug}`}
-          className="relative w-full h-full flex items-center justify-center group-hover:scale-105 group-hover:-translate-y-1.5 transition-all duration-700 ease-out"
+          className="relative w-full h-full block group-hover:scale-105 transition-transform duration-700 ease-out"
           aria-label={`View details for ${product.name}`}
         >
           <Image
@@ -275,10 +275,8 @@ export default function ProductCard({
             alt={primaryImage.alt || product.name}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-contain filter drop-shadow-[0_15px_25px_rgba(15,23,42,0.1)]"
+            className="object-cover"
           />
-          {/* Subtle Dynamic Pedestal Shadow */}
-          <div className="absolute bottom-1 inset-x-10 h-3.5 bg-slate-900/10 rounded-full blur-md opacity-30 group-hover:opacity-60 group-hover:scale-90 transition-all duration-700 pointer-events-none" />
         </Link>
 
         {/* Top Badges */}
