@@ -73,121 +73,123 @@ export default function ProductDetailPage() {
         </div>
 
         {/* ================================================================ */}
-        {/* PRODUCT CAMPAIGN STAGE                                           */}
+        {/* PREMIUM PRODUCT HERO SECTION                                     */}
         {/* ================================================================ */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-16">
-            {/* Left: Floating Campaign Image Stage (6 cols) */}
-            <div className="lg:col-span-6">
-              <div className="aspect-[4/5] rounded-3xl bg-gradient-to-b from-sky-50/70 via-slate-50 to-white border border-slate-200/90 p-8 flex items-center justify-center relative overflow-hidden shadow-sm">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(240,249,255,0.8),transparent_70%)] pointer-events-none" />
-                <div className="relative w-full h-full flex flex-col items-center justify-center product-float">
-                  <div className="relative w-full h-4/5 max-h-[460px]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 mb-16">
+            
+            {/* Left: Massive Edge-to-Edge Image Stage (7 cols) */}
+            <div className="lg:col-span-7 flex flex-col">
+              <div className="w-full relative aspect-square sm:aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-[2.5rem] bg-slate-50 border border-slate-200/60 overflow-hidden shadow-sm group">
+                <div className="absolute inset-0 bg-gradient-to-tr from-slate-100 via-white to-sky-50 opacity-50 pointer-events-none" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 sm:p-12 transition-transform duration-700 ease-out group-hover:scale-105">
+                  <div className="relative w-full h-full">
                     <Image
                       src={primaryImage.src}
                       alt={primaryImage.alt || product.name}
                       fill
                       priority
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-contain filter drop-shadow-[0_20px_40px_rgba(15,23,42,0.18)]"
+                      sizes="(max-width: 768px) 100vw, 60vw"
+                      className="object-contain filter drop-shadow-[0_20px_40px_rgba(15,23,42,0.15)] mix-blend-multiply"
                     />
                   </div>
-                {/* Floating water shadow beneath product */}
-                <div className="w-3/4 h-5 water-shadow rounded-full mx-auto mt-4 opacity-75" />
+                </div>
+                
+                <div className="absolute top-6 right-6 z-10">
+                  <AvailabilityBadge status={product.availability} size="md" />
+                </div>
               </div>
 
-              <div className="absolute top-4 right-4 z-10">
-                <AvailabilityBadge status={product.availability} size="md" />
-              </div>
+              {/* Minimalist Thumbnail Gallery */}
+              {images.length > 1 && (
+                <div className="flex items-center justify-center gap-4 mt-6 overflow-x-auto pb-2 scrollbar-hide">
+                  {images.map((img, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveImageIndex(idx)}
+                      className={`relative w-24 h-24 shrink-0 rounded-2xl overflow-hidden transition-all duration-300 ${
+                        activeImageIndex === idx 
+                        ? 'ring-2 ring-sky-500 shadow-md bg-white' 
+                        : 'border border-slate-200 bg-slate-50 hover:bg-white hover:border-slate-300 opacity-70 hover:opacity-100'
+                      }`}
+                    >
+                      <Image
+                        src={img.src}
+                        alt={img.alt || `${product.name} thumbnail ${idx + 1}`}
+                        fill
+                        sizes="96px"
+                        className="object-contain p-2 mix-blend-multiply"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
-            {/* Thumbnail Gallery */}
-            {images.length > 1 && (
-              <div className="flex items-center gap-3 mt-4 overflow-x-auto pb-2 scrollbar-hide">
-                {images.map((img, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setActiveImageIndex(idx)}
-                    className={`relative w-20 h-20 shrink-0 rounded-xl overflow-hidden border-2 transition-all ${
-                      activeImageIndex === idx ? 'border-sky-500 shadow-md scale-105' : 'border-slate-200 hover:border-sky-300 opacity-70 hover:opacity-100'
-                    }`}
-                  >
-                    <Image
-                      src={img.src}
-                      alt={img.alt || `${product.name} thumbnail ${idx + 1}`}
-                      fill
-                      sizes="80px"
-                      className="object-contain bg-slate-50 p-2"
-                    />
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-
-            {/* Right: Campaign Details & Primary Direct Conversion (6 cols) */}
-            <div className="lg:col-span-6 flex flex-col justify-center">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="technical-mono text-xs font-bold text-sky-600">
+            {/* Right: Premium Details & Conversion (5 cols) */}
+            <div className="lg:col-span-5 flex flex-col justify-center py-6 lg:py-10">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="px-3 py-1 bg-sky-100 text-sky-700 text-xs font-bold uppercase tracking-widest rounded-full">
                   {product.brand}
                 </span>
-                <span className="text-slate-300">·</span>
-                <span className="technical-mono text-xs text-slate-400 font-mono">
-                  {product.sku}
+                <span className="text-slate-400 font-mono text-xs">
+                  SKU: {product.sku}
                 </span>
               </div>
 
-              <h1 className="text-2xl min-[360px]:text-3xl sm:text-5xl font-black text-slate-950 uppercase tracking-tight leading-[0.95] mb-4 break-words">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 uppercase tracking-tighter leading-[1.1] mb-6">
                 {product.name}
               </h1>
 
-              {/* Price Callout */}
-              <div className="flex items-baseline gap-3 mb-6 pb-6 border-b border-slate-200">
+              {/* Price Callout - Clean & Bold */}
+              <div className="flex items-end gap-3 mb-8">
                 {product.price ? (
                   <>
-                    <span className="text-3xl font-black text-slate-950">{formatPrice(product.price)}</span>
-                    <span className="technical-mono text-xs text-slate-500 font-bold">
-                      PER PIECE (WHOLESALE LOT)
+                    <span className="text-4xl font-black text-slate-900 tracking-tight">{formatPrice(product.price)}</span>
+                    <span className="text-sm text-slate-500 font-medium mb-1 uppercase tracking-wider">
+                      / Wholesale
                     </span>
                   </>
                 ) : (
-                  <span className="text-sm font-bold text-slate-700 technical-mono">
-                    CONTACT FOR WHOLESALE LOT PRICING
+                  <span className="text-lg font-bold text-sky-600 uppercase tracking-wide">
+                    Request Pricing
                   </span>
                 )}
               </div>
 
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-8 font-normal">
+              <div className="w-12 h-1 bg-sky-500 rounded-full mb-8" />
+
+              <p className="text-base text-slate-600 leading-relaxed mb-10 font-medium">
                 {product.description}
               </p>
 
-              {/* Direct Acquisition Prompt */}
-              <div className="bg-slate-950 text-white rounded-2xl p-6 mb-8 border border-slate-800 shadow-md">
-                <span className="technical-mono text-[10px] font-bold text-sky-400 block mb-2">
-                  NEED THIS APPAREL FOR YOUR SQUAD OR STORE?
-                </span>
-                <p className="text-xs text-slate-400 mb-5">
-                  Launch an instant WhatsApp enquiry for stock verification and carton rate sheets, or call our Chennai warehouse desk.
+              {/* Premium Direct Acquisition Prompt */}
+              <div className="bg-slate-50 border border-slate-200/80 rounded-[2rem] p-8 mb-8 shadow-sm">
+                <h3 className="text-sm font-bold text-slate-900 uppercase tracking-widest mb-2">
+                  Ready to Order?
+                </h3>
+                <p className="text-sm text-slate-500 mb-6 leading-relaxed">
+                  Connect with our warehouse team instantly to check live inventory and secure your bulk pricing.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex flex-col gap-4">
                   <button
                     onClick={() => {
                       setEnquiryOpen(true);
                       trackProductView(product.id, product.name, product.brand, product.category);
                     }}
-                    className="flex-1 whatsapp-btn flex items-center justify-center gap-2 py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl shadow-xs"
+                    className="w-full flex items-center justify-center gap-3 py-4 text-sm font-bold uppercase tracking-widest text-white bg-slate-950 hover:bg-slate-900 rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
                   >
-                    <MessageCircle className="w-4 h-4" />
-                    WhatsApp Enquiry
+                    <MessageCircle className="w-5 h-5" />
+                    Enquire Now
                   </button>
                   <a
                     href={getPhoneUrl()}
                     onClick={() => trackCallClick('product-detail')}
-                    className="flex-1 flex items-center justify-center gap-2 py-3.5 text-xs font-bold uppercase tracking-wider text-white bg-slate-900 hover:bg-slate-800 border border-slate-700 rounded-xl transition-colors"
+                    className="w-full flex items-center justify-center gap-3 py-4 text-sm font-bold uppercase tracking-widest text-slate-900 bg-white hover:bg-slate-50 border-2 border-slate-200 rounded-2xl transition-colors duration-300"
                   >
-                    <Phone className="w-4 h-4 text-sky-400" />
-                    Call: {CONTACT.phone}
+                    <Phone className="w-5 h-5 text-slate-400" />
+                    Call Warehouse
                   </a>
                 </div>
               </div>

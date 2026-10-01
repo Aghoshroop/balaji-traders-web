@@ -93,30 +93,30 @@ export default function ProductQuickViewModal({
 
         <div className="grid md:grid-cols-12 max-h-[85vh] overflow-y-auto">
           {/* Left Column: Visual Stage */}
-          <div className="md:col-span-5 bg-gradient-to-b from-sky-50/50 via-slate-50 to-white p-6 sm:p-8 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-slate-200 relative overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(240,249,255,0.8),transparent_70%)] pointer-events-none" />
-            <div className="absolute top-4 left-4 flex flex-col gap-1 z-10">
-              <span className="technical-mono text-[9px] font-black uppercase tracking-widest text-sky-600 bg-white/90 px-2 py-0.5 rounded border border-sky-200">
+          <div className="md:col-span-5 bg-gradient-to-tr from-slate-100 via-white to-sky-50 p-8 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-slate-200 relative overflow-hidden group">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(240,249,255,0.6),transparent_70%)] pointer-events-none" />
+            
+            <div className="absolute top-5 left-5 flex flex-col gap-1.5 z-10">
+              <span className="px-2.5 py-1 bg-white text-sky-700 text-[10px] font-bold uppercase tracking-widest rounded-md border border-slate-200 shadow-sm">
                 {product.brand}
               </span>
               {product.isNewArrival && (
-                <span className="technical-mono text-[9px] font-black uppercase tracking-widest bg-slate-950 text-white px-2 py-0.5 rounded">
-                  NEW ARRIVAL
+                <span className="px-2.5 py-1 bg-slate-900 text-white text-[10px] font-bold uppercase tracking-widest rounded-md shadow-sm">
+                  NEW
                 </span>
               )}
             </div>
 
-            {/* Product Image */}
-            <div className="relative w-full aspect-square max-w-[260px] sm:max-w-[300px] flex items-center justify-center my-4 group">
+            {/* Premium Product Image */}
+            <div className="relative w-full aspect-square w-full sm:w-11/12 max-w-sm flex items-center justify-center my-6">
               <Image
                 src={primaryImage.src}
                 alt={product.name}
                 fill
-                sizes="(max-width: 768px) 260px, 300px"
-                className="object-contain filter drop-shadow-[0_15px_30px_rgba(15,23,42,0.15)] group-hover:scale-105 transition-transform duration-300"
+                sizes="(max-width: 768px) 100vw, 400px"
+                className="object-contain filter drop-shadow-[0_20px_30px_rgba(15,23,42,0.15)] group-hover:scale-105 transition-transform duration-500 ease-out mix-blend-multiply"
                 priority
               />
-              <div className="absolute bottom-1 inset-x-8 h-3.5 bg-slate-900/10 rounded-full blur-md opacity-40 pointer-events-none" />
             </div>
 
             {/* Availability */}
