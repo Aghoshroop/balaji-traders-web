@@ -26,8 +26,8 @@ export default function ProductCard({
     alt: product.name,
   };
 
-  const displayPrice = product.isHardcodedUntouched ? 0 : product.price;
-  const displayMrp = product.isHardcodedUntouched ? 0 : product.mrp;
+  const displayPrice = product.isHardcodedUntouched ? 0 : (product.price || 0);
+  const displayMrp = product.isHardcodedUntouched ? 0 : (product.mrp || 0);
 
   const discountPercent =
     displayMrp && displayPrice && displayMrp > displayPrice

@@ -3,8 +3,9 @@ import { SEO } from '@/lib/config';
 import { getAllProducts } from '@/data/products';
 import { categories } from '@/data/categories';
 
-export default async function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = SEO.siteUrl;
+  const products = await getAllProducts();
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
