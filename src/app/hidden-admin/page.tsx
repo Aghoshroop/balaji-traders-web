@@ -26,15 +26,13 @@ export default function HiddenAdminPanel() {
   const fetchProducts = async () => {
     setLoading(true);
     try {
-      const snapshot = await getDocs(collection(db, 'products'));
-      const data: Product[] = [];
-      snapshot.forEach(doc => data.push({ id: doc.id, ...doc.data() } as Product));
-      // Sort by ID
-      data.sort((a, b) => parseInt(a.id.replace('prod-', '')) - parseInt(b.id.replace('prod-', '')));
+      const res = await fetch('/api/admin/products', { cache: 'no-store' });
+      if (!res.ok) throw new Error('Failed to fetch');
+      const data: Product[] = await res.json();
       setProducts(data);
     } catch (err: any) {
       console.error('Failed to load products', err);
-      showFeedback('Error fetching products. Check Firebase Rules.');
+      showFeedback('Error fetching products.');
     } finally {
       setLoading(false);
     }

@@ -1,39 +1,46 @@
 import type { Product } from '@/types';
 import { db } from '@/lib/firebase';
 import { collection, getDocs, query } from 'firebase/firestore';
-
-// In-memory cache for static-like behavior during navigation
-let cachedProducts: Product[] | null = null;
-let lastFetchTime = 0;
-const CACHE_DURATION = 1000 * 60 * 5; // 5 minutes
+import hardcodedProducts from './products.json';
 
 export async function getAllProducts(): Promise<Product[]> {
-  if (cachedProducts && Date.now() - lastFetchTime < CACHE_DURATION) {
-    return cachedProducts;
-  }
-
+  let firebaseProducts: Product[] = [];
   try {
     const q = query(collection(db, 'products'));
     const snapshot = await getDocs(q);
-    const products: Product[] = [];
     
     snapshot.forEach((doc) => {
-      products.push({ id: doc.id, ...doc.data() } as Product);
+      firebaseProducts.push({ id: doc.id, ...doc.data() } as Product);
     });
-    
-    cachedProducts = products;
-    lastFetchTime = Date.now();
-    return products;
   } catch (error) {
-    console.error("Error fetching products from Firebase:", error);
-    // Fallback to local JSON if Firebase fails (e.g. permission denied)
-    try {
-      const fallback = require('./products.json');
-      return fallback.default || fallback;
-    } catch {
-      return [];
-    }
+    console.error("Error fetching products from Firebase (maybe rules block it):", error);
+    // Ignore error, we will just use hardcoded products
   }
+
+  // Merge hardcoded and firebase products.
+  // Firebase products take precedence if they share the same ID (allowing admin to "edit" hardcoded products).
+  const mergedMap = new Map<string, Product>();
+  
+  // 1. Add all hardcoded products
+  hardcodedProducts.forEach((p: any) => {
+    mergedMap.set(p.id, p);
+  });
+  
+  // 2. Add/Override with Firebase products
+  firebaseProducts.forEach((p) => {
+    mergedMap.set(p.id, p);
+  });
+  
+  const finalProducts = Array.from(mergedMap.values());
+  
+  // Sort by numeric part of ID (e.g. prod-1, prod-2)
+  finalProducts.sort((a, b) => {
+    const numA = parseInt(a.id.replace('prod-', ''), 10) || 0;
+    const numB = parseInt(b.id.replace('prod-', ''), 10) || 0;
+    return numA - numB;
+  });
+  
+  return finalProducts;
 }
 
 export async function getProductBySlug(slug: string): Promise<Product | undefined> {
