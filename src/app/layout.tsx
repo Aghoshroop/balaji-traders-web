@@ -1,12 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import MobileActionBar from '@/components/layout/MobileActionBar';
-import SplashScreen from '@/components/layout/SplashScreen';
-import SupportChatWidget from '@/components/chat/SupportChatWidget';
 import SmoothScrollProvider from '@/components/layout/SmoothScrollProvider';
+import AppLayout from '@/components/layout/AppLayout';
 import { BUSINESS, SEO } from '@/lib/config';
 import { getOrganizationSchema, getWebSiteSchema, getLocalBusinessSchema } from '@/lib/schema';
 
@@ -118,14 +114,7 @@ export default function RootLayout({
         </div>
 
         <SmoothScrollProvider>
-          <SplashScreen />
-          <Header />
-          <main className="flex-1 w-full min-w-0 max-w-full overflow-x-hidden pt-20 sm:pt-24 lg:pt-28 pb-16 lg:pb-0">
-            {children}
-          </main>
-          <Footer />
-          <MobileActionBar />
-          <SupportChatWidget />
+          <AppLayout>{children}</AppLayout>
         </SmoothScrollProvider>
       </body>
     </html>
