@@ -93,8 +93,8 @@ export default function ProductQuickViewModal({
 
         <div className="grid md:grid-cols-12 max-h-[85vh] overflow-y-auto">
           {/* Left Column: Visual Stage */}
-          <div className="md:col-span-5 bg-gradient-to-tr from-slate-100 via-white to-sky-50 p-8 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-slate-200 relative overflow-hidden group">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(240,249,255,0.6),transparent_70%)] pointer-events-none" />
+          <div className="md:col-span-5 bg-white p-8 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-slate-200 relative overflow-hidden group">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(240,249,255,0.5),transparent_70%)] pointer-events-none" />
             
             <div className="absolute top-5 left-5 flex flex-col gap-1.5 z-10">
               <span className="px-2.5 py-1 bg-white text-sky-700 text-[10px] font-bold uppercase tracking-widest rounded-md border border-slate-200 shadow-sm">
@@ -114,7 +114,7 @@ export default function ProductQuickViewModal({
                 alt={product.name}
                 fill
                 sizes="(max-width: 768px) 100vw, 400px"
-                className="object-contain filter drop-shadow-[0_20px_30px_rgba(15,23,42,0.15)] group-hover:scale-105 transition-transform duration-500 ease-out mix-blend-multiply"
+                className="object-contain filter drop-shadow-[0_20px_30px_rgba(15,23,42,0.15)] group-hover:scale-105 transition-transform duration-500 ease-out"
                 priority
               />
             </div>

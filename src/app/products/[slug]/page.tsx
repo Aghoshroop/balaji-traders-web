@@ -80,8 +80,8 @@ export default function ProductDetailPage() {
             
             {/* Left: Massive Edge-to-Edge Image Stage (7 cols) */}
             <div className="lg:col-span-7 flex flex-col">
-              <div className="w-full relative aspect-square sm:aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-[2.5rem] bg-slate-50 border border-slate-200/60 overflow-hidden shadow-sm group">
-                <div className="absolute inset-0 bg-gradient-to-tr from-slate-100 via-white to-sky-50 opacity-50 pointer-events-none" />
+              <div className="w-full relative aspect-square sm:aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-[2.5rem] bg-white border border-slate-200/60 overflow-hidden shadow-sm group">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(240,249,255,0.4),transparent_70%)] pointer-events-none" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6 sm:p-12 transition-transform duration-700 ease-out group-hover:scale-105">
                   <div className="relative w-full h-full">
                     <Image
@@ -90,7 +90,7 @@ export default function ProductDetailPage() {
                       fill
                       priority
                       sizes="(max-width: 768px) 100vw, 60vw"
-                      className="object-contain filter drop-shadow-[0_20px_40px_rgba(15,23,42,0.15)] mix-blend-multiply"
+                      className="object-contain filter drop-shadow-[0_20px_40px_rgba(15,23,42,0.15)]"
                     />
                   </div>
                 </div>
@@ -118,7 +118,7 @@ export default function ProductDetailPage() {
                         alt={img.alt || `${product.name} thumbnail ${idx + 1}`}
                         fill
                         sizes="96px"
-                        className="object-contain p-2 mix-blend-multiply"
+                        className="object-contain p-2"
                       />
                     </button>
                   ))}
