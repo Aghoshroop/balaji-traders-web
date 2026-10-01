@@ -1,0 +1,2567 @@
+[
+  {
+    "id": "prod-1",
+    "slug": "eglider-womens-classic-black-one-piece",
+    "name": "Eglider Women's Classic Black One-Piece",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-001",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Women's Classic Black One-Piece - Classic black one-piece with red straps. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Classic black one-piece with red straps.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-1.jpeg",
+        "alt": "Product 1",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": true,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Women's Classic Black One-Piece | Balaji Traders",
+    "seoDescription": "Buy Eglider Women's Classic Black One-Piece at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-2",
+    "slug": "eglider-womens-open-back-one-piece",
+    "name": "Eglider Women's Open Back One-Piece",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-002",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Women's Open Back One-Piece - Sleek black one-piece with open back and red straps. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Sleek black one-piece with open back and red straps.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-2.jpeg",
+        "alt": "Product 2",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": true,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Women's Open Back One-Piece | Balaji Traders",
+    "seoDescription": "Buy Eglider Women's Open Back One-Piece at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-3",
+    "slug": "eglider-aqua-burst-kneeskin",
+    "name": "Eglider Aqua Burst Kneeskin",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-003",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Aqua Burst Kneeskin - Full body racing kneeskin with aqua blue pattern. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Full body racing kneeskin with aqua blue pattern.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-3.jpeg",
+        "alt": "Product 3",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": true,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Aqua Burst Kneeskin | Balaji Traders",
+    "seoDescription": "Buy Eglider Aqua Burst Kneeskin at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-4",
+    "slug": "eglider-aqua-burst-one-piece",
+    "name": "Eglider Aqua Burst One-Piece",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-004",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Aqua Burst One-Piece - One-piece training suit with aqua blue pattern. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "One-piece training suit with aqua blue pattern.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-4.jpeg",
+        "alt": "Product 4",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": true,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Aqua Burst One-Piece | Balaji Traders",
+    "seoDescription": "Buy Eglider Aqua Burst One-Piece at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-5",
+    "slug": "eglider-youth-swim-training-set",
+    "name": "Eglider Youth Swim Training Set",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-005",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Youth Swim Training Set - Matching boy's brief and girl's one-piece in blue pattern. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Matching boy's brief and girl's one-piece in blue pattern.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-5.jpeg",
+        "alt": "Product 5",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": true,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Youth Swim Training Set | Balaji Traders",
+    "seoDescription": "Buy Eglider Youth Swim Training Set at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-6",
+    "slug": "eglider-geometric-training-suit",
+    "name": "Eglider Geometric Training Suit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-006",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Geometric Training Suit - Dark one-piece with vibrant geometric patterns. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Dark one-piece with vibrant geometric patterns.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-6.jpeg",
+        "alt": "Product 6",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": true,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Geometric Training Suit | Balaji Traders",
+    "seoDescription": "Buy Eglider Geometric Training Suit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-7",
+    "slug": "eglider-water-polo-suit-red",
+    "name": "Eglider Water Polo Suit Red",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-007",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Water Polo Suit Red - Zip-front red water polo suit. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Zip-front red water polo suit.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-7.jpeg",
+        "alt": "Product 7",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": true,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Water Polo Suit Red | Balaji Traders",
+    "seoDescription": "Buy Eglider Water Polo Suit Red at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-8",
+    "slug": "eglider-36l-swim-backpack",
+    "name": "Eglider 36L Swim Backpack",
+    "brand": "Balaji",
+    "category": "Accessories",
+    "categorySlug": "accessories",
+    "sku": "BLJ-008",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider 36L Swim Backpack - Red 36-liter heavy-duty swim bag. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Red 36-liter heavy-duty swim bag.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-8.jpeg",
+        "alt": "Product 8",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": true,
+    "isNewArrival": false,
+    "seoTitle": "Eglider 36L Swim Backpack | Balaji Traders",
+    "seoDescription": "Buy Eglider 36L Swim Backpack at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-9",
+    "slug": "eglider-pro-black-and-neon-suit",
+    "name": "Eglider Pro Black & Neon Suit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-009",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Pro Black & Neon Suit - Black one-piece with neon green Eglider logo. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Black one-piece with neon green Eglider logo.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-9.jpeg",
+        "alt": "Product 9",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": true,
+    "seoTitle": "Eglider Pro Black & Neon Suit | Balaji Traders",
+    "seoDescription": "Buy Eglider Pro Black & Neon Suit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-10",
+    "slug": "eglide-competition-pink-fusion",
+    "name": "eGLIDE Competition Pink Fusion",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-010",
+    "price": 500,
+    "mrp": 750,
+    "description": "eGLIDE Competition Pink Fusion - High-performance competition suit in pink/blue. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "High-performance competition suit in pink/blue.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-10.jpeg",
+        "alt": "Product 10",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": true,
+    "seoTitle": "eGLIDE Competition Pink Fusion | Balaji Traders",
+    "seoDescription": "Buy eGLIDE Competition Pink Fusion at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-11",
+    "slug": "eglider-ignite-racing-kneeskin",
+    "name": "Eglider Ignite Racing Kneeskin",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-011",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Ignite Racing Kneeskin - Orange and blue racing kneeskin. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Orange and blue racing kneeskin.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-11.jpeg",
+        "alt": "Product 11",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": true,
+    "seoTitle": "Eglider Ignite Racing Kneeskin | Balaji Traders",
+    "seoDescription": "Buy Eglider Ignite Racing Kneeskin at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-12",
+    "slug": "eglider-pro-series-swirl",
+    "name": "EGLIDER Pro Series Swirl",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-012",
+    "price": 500,
+    "mrp": 750,
+    "description": "EGLIDER Pro Series Swirl - High-compression multicolor swirl one-piece. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "High-compression multicolor swirl one-piece.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-12.jpeg",
+        "alt": "Product 12",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": true,
+    "seoTitle": "EGLIDER Pro Series Swirl | Balaji Traders",
+    "seoDescription": "Buy EGLIDER Pro Series Swirl at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-13",
+    "slug": "eglider-neon-streak-suit",
+    "name": "Eglider Neon Streak Suit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-013",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Neon Streak Suit - Black one-piece with neon pink and blue streaks. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Black one-piece with neon pink and blue streaks.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-13.jpeg",
+        "alt": "Product 13",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": true,
+    "seoTitle": "Eglider Neon Streak Suit | Balaji Traders",
+    "seoDescription": "Buy Eglider Neon Streak Suit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-14",
+    "slug": "eglider-electric-blue-suit",
+    "name": "Eglider Electric Blue Suit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-014",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Electric Blue Suit - Blue cracked lightning pattern one-piece. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Blue cracked lightning pattern one-piece.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-14.jpeg",
+        "alt": "Product 14",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": true,
+    "seoTitle": "Eglider Electric Blue Suit | Balaji Traders",
+    "seoDescription": "Buy Eglider Electric Blue Suit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-15",
+    "slug": "eglider-performance-kneeskin-teal",
+    "name": "Eglider Performance Kneeskin Teal",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-015",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Performance Kneeskin Teal - Blue and teal performance racing kneeskin. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Blue and teal performance racing kneeskin.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-15.jpeg",
+        "alt": "Product 15",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": true,
+    "seoTitle": "Eglider Performance Kneeskin Teal | Balaji Traders",
+    "seoDescription": "Buy Eglider Performance Kneeskin Teal at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-16",
+    "slug": "eglider-india-national-suit",
+    "name": "Eglider India National Suit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-016",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider India National Suit - Blue and red swirl suit with India cap styling. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Blue and red swirl suit with India cap styling.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-16.jpeg",
+        "alt": "Product 16",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": true,
+    "seoTitle": "Eglider India National Suit | Balaji Traders",
+    "seoDescription": "Buy Eglider India National Suit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-17",
+    "slug": "eglider-performance-kneeskin-pro",
+    "name": "Eglider Performance Kneeskin Pro",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-017",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Performance Kneeskin Pro - High compression racing kneeskin with teal leg panel. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "High compression racing kneeskin with teal leg panel.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-17.jpeg",
+        "alt": "Product 17",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Performance Kneeskin Pro | Balaji Traders",
+    "seoDescription": "Buy Eglider Performance Kneeskin Pro at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-18",
+    "slug": "eglider-performance-blue-swirl",
+    "name": "Eglider Performance Blue Swirl",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-018",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Performance Blue Swirl - Highly compressed blue swirl patterned one-piece. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Highly compressed blue swirl patterned one-piece.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-18.jpeg",
+        "alt": "Product 18",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Performance Blue Swirl | Balaji Traders",
+    "seoDescription": "Buy Eglider Performance Blue Swirl at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-19",
+    "slug": "gudet-orange-geometric-suit",
+    "name": "Gudet Orange Geometric Suit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-019",
+    "price": 500,
+    "mrp": 750,
+    "description": "Gudet Orange Geometric Suit - Black and orange geometric patterned suit. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Black and orange geometric patterned suit.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-19.jpeg",
+        "alt": "Product 19",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Gudet Orange Geometric Suit | Balaji Traders",
+    "seoDescription": "Buy Gudet Orange Geometric Suit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-20",
+    "slug": "eglider-pink-fusion-back",
+    "name": "Eglider Pink Fusion Back",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-020",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Pink Fusion Back - Open back pink and blue patterned training suit. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Open back pink and blue patterned training suit.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-20.jpeg",
+        "alt": "Product 20",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Pink Fusion Back | Balaji Traders",
+    "seoDescription": "Buy Eglider Pink Fusion Back at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-21",
+    "slug": "eglider-swim-pull-buoy",
+    "name": "Eglider Swim Pull Buoy",
+    "brand": "Balaji",
+    "category": "Accessories",
+    "categorySlug": "accessories",
+    "sku": "BLJ-021",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Swim Pull Buoy - Pink foam pull buoy for swim training. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Pink foam pull buoy for swim training.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-21.jpeg",
+        "alt": "Product 21",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Swim Pull Buoy | Balaji Traders",
+    "seoDescription": "Buy Eglider Swim Pull Buoy at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-22",
+    "slug": "eglider-geo-pattern-cap-white",
+    "name": "Eglider Geo Pattern Cap White",
+    "brand": "Balaji",
+    "category": "Accessories",
+    "categorySlug": "accessories",
+    "sku": "BLJ-022",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Geo Pattern Cap White - White silicone cap with blue/red geometric design. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "White silicone cap with blue/red geometric design.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-22.jpeg",
+        "alt": "Product 22",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Geo Pattern Cap White | Balaji Traders",
+    "seoDescription": "Buy Eglider Geo Pattern Cap White at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-23",
+    "slug": "eglider-geo-pattern-cap-blue",
+    "name": "Eglider Geo Pattern Cap Blue",
+    "brand": "Balaji",
+    "category": "Accessories",
+    "categorySlug": "accessories",
+    "sku": "BLJ-023",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Geo Pattern Cap Blue - Blue silicone cap with white/red geometric design. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Blue silicone cap with white/red geometric design.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-23.jpeg",
+        "alt": "Product 23",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Geo Pattern Cap Blue | Balaji Traders",
+    "seoDescription": "Buy Eglider Geo Pattern Cap Blue at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-24",
+    "slug": "eglider-solid-blue-silicone-cap",
+    "name": "Eglider Solid Blue Silicone Cap",
+    "brand": "Balaji",
+    "category": "Accessories",
+    "categorySlug": "accessories",
+    "sku": "BLJ-024",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Solid Blue Silicone Cap - Plain blue silicone swim cap. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Plain blue silicone swim cap.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-24.jpeg",
+        "alt": "Product 24",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Solid Blue Silicone Cap | Balaji Traders",
+    "seoDescription": "Buy Eglider Solid Blue Silicone Cap at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-25",
+    "slug": "eglider-solid-gray-silicone-cap",
+    "name": "Eglider Solid Gray Silicone Cap",
+    "brand": "Balaji",
+    "category": "Accessories",
+    "categorySlug": "accessories",
+    "sku": "BLJ-025",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Solid Gray Silicone Cap - Plain light gray silicone swim cap. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Plain light gray silicone swim cap.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-25.jpeg",
+        "alt": "Product 25",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Solid Gray Silicone Cap | Balaji Traders",
+    "seoDescription": "Buy Eglider Solid Gray Silicone Cap at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-26",
+    "slug": "eglider-geo-pattern-cap-pro-blue",
+    "name": "Eglider Geo Pattern Cap Pro Blue",
+    "brand": "Balaji",
+    "category": "Accessories",
+    "categorySlug": "accessories",
+    "sku": "BLJ-026",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Geo Pattern Cap Pro Blue - Blue silicone cap with white/red geo design. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Blue silicone cap with white/red geo design.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-26.jpeg",
+        "alt": "Product 26",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Standard",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Geo Pattern Cap Pro Blue | Balaji Traders",
+    "seoDescription": "Buy Eglider Geo Pattern Cap Pro Blue at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-27",
+    "slug": "eglider-bold-pattern-swimwear",
+    "name": "Eglider Bold Pattern Swimwear",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-027",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Bold Pattern Swimwear - Vibrant abstract design in orange and black. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Vibrant abstract design in orange and black.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-27.jpeg",
+        "alt": "Product 27",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Bold Pattern Swimwear | Balaji Traders",
+    "seoDescription": "Buy Eglider Bold Pattern Swimwear at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-28",
+    "slug": "eglider-aqua-hex-swimsuit",
+    "name": "Eglider Aqua Hex Swimsuit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-028",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Aqua Hex Swimsuit - Vibrant blue hexagonal design for dynamic swimming. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Vibrant blue hexagonal design for dynamic swimming.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-28.jpeg",
+        "alt": "Product 28",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Aqua Hex Swimsuit | Balaji Traders",
+    "seoDescription": "Buy Eglider Aqua Hex Swimsuit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-29",
+    "slug": "eglider-electric-wave-swimwear",
+    "name": "Eglider Electric Wave Swimwear",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-029",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Electric Wave Swimwear - Dynamic blue lightning-inspired design. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Dynamic blue lightning-inspired design.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-29.jpeg",
+        "alt": "Product 29",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Electric Wave Swimwear | Balaji Traders",
+    "seoDescription": "Buy Eglider Electric Wave Swimwear at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-30",
+    "slug": "eglider-splash-style-swimsuit",
+    "name": "Eglider Splash Style Swimsuit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-030",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Splash Style Swimsuit - Bold, vibrant design with dynamic lines. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Bold, vibrant design with dynamic lines.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-30.jpeg",
+        "alt": "Product 30",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Splash Style Swimsuit | Balaji Traders",
+    "seoDescription": "Buy Eglider Splash Style Swimsuit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-31",
+    "slug": "eglider-vibrant-waves-suit",
+    "name": "Eglider Vibrant Waves Suit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-031",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Vibrant Waves Suit - Bold, colorful design with dynamic patterns. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Bold, colorful design with dynamic patterns.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-31.jpeg",
+        "alt": "Product 31",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Vibrant Waves Suit | Balaji Traders",
+    "seoDescription": "Buy Eglider Vibrant Waves Suit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-32",
+    "slug": "eglider-tropical-vibes-swimsuit",
+    "name": "Eglider Tropical Vibes Swimsuit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-032",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Tropical Vibes Swimsuit - Bold floral pattern in vibrant orange and black. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Bold floral pattern in vibrant orange and black.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-32.jpeg",
+        "alt": "Product 32",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Tropical Vibes Swimsuit | Balaji Traders",
+    "seoDescription": "Buy Eglider Tropical Vibes Swimsuit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-33",
+    "slug": "eglider-wave-splash-swimsuit",
+    "name": "Eglider Wave Splash Swimsuit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-033",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Wave Splash Swimsuit - Dynamic abstract print for vibrant energy. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Dynamic abstract print for vibrant energy.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-33.jpeg",
+        "alt": "Product 33",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Wave Splash Swimsuit | Balaji Traders",
+    "seoDescription": "Buy Eglider Wave Splash Swimsuit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-34",
+    "slug": "eglider-aqua-racer",
+    "name": "Eglider Aqua Racer",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-034",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Aqua Racer - Dynamic design with teal and navy patterns. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Dynamic design with teal and navy patterns.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-34.jpeg",
+        "alt": "Product 34",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Aqua Racer | Balaji Traders",
+    "seoDescription": "Buy Eglider Aqua Racer at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-35",
+    "slug": "eglider-aqua-wave-racer",
+    "name": "Eglider Aqua Wave Racer",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-035",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Aqua Wave Racer - Dynamic ocean-inspired print with sporty functionality. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Dynamic ocean-inspired print with sporty functionality.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-35.jpeg",
+        "alt": "Product 35",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Aqua Wave Racer | Balaji Traders",
+    "seoDescription": "Buy Eglider Aqua Wave Racer at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-36",
+    "slug": "eglider-swim-fit",
+    "name": "Eglider Swim Fit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-036",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Swim Fit - Sleek design with vibrant blue patterns. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Sleek design with vibrant blue patterns.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-36.jpeg",
+        "alt": "Product 36",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Swim Fit | Balaji Traders",
+    "seoDescription": "Buy Eglider Swim Fit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-37",
+    "slug": "eglider-ocean-wave-swimwear",
+    "name": "Eglider Ocean Wave Swimwear",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-037",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Ocean Wave Swimwear - Sleek design with a dynamic ocean-inspired pattern. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Sleek design with a dynamic ocean-inspired pattern.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-37.jpeg",
+        "alt": "Product 37",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Ocean Wave Swimwear | Balaji Traders",
+    "seoDescription": "Buy Eglider Ocean Wave Swimwear at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-38",
+    "slug": "eglider-performance-swimwear",
+    "name": "Eglider Performance Swimwear",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-038",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Performance Swimwear - Vibrant hexagonal design with high elasticity. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Vibrant hexagonal design with high elasticity.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-38.jpeg",
+        "alt": "Product 38",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Compressed Four-Way Stretch Spandex",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Performance Swimwear | Balaji Traders",
+    "seoDescription": "Buy Eglider Performance Swimwear at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-39",
+    "slug": "eglider-classic-swim-one-piece",
+    "name": "Eglider Classic Swim One-Piece",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-039",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Classic Swim One-Piece - A sleek black swimsuit with contrasting red straps. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "A sleek black swimsuit with contrasting red straps.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-39.jpeg",
+        "alt": "Product 39",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Classic Swim One-Piece | Balaji Traders",
+    "seoDescription": "Buy Eglider Classic Swim One-Piece at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-40",
+    "slug": "eglider-iridescent-swim-suit",
+    "name": "Eglider Iridescent Swim Suit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-040",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Iridescent Swim Suit - Vibrant iridescent long-sleeve design. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Vibrant iridescent long-sleeve design.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-40.jpeg",
+        "alt": "Product 40",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Iridescent Swim Suit | Balaji Traders",
+    "seoDescription": "Buy Eglider Iridescent Swim Suit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-41",
+    "slug": "eglider-swim-training-aid",
+    "name": "Eglider Swim Training Aid",
+    "brand": "Balaji",
+    "category": "Accessories",
+    "categorySlug": "accessories",
+    "sku": "BLJ-041",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Swim Training Aid - Bright pink hydrodynamic design for support. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Bright pink hydrodynamic design for support.",
+    "images": [
+      {
+        "src": "/images/products/ai-product-41.jpeg",
+        "alt": "Product 41",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Foam Rubber",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Swim Training Aid | Balaji Traders",
+    "seoDescription": "Buy Eglider Swim Training Aid at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-42",
+    "slug": "eglider-pool-team-collection",
+    "name": "Eglider Pool Team Collection",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-042",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Pool Team Collection - Vibrant swimwear in various colors. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Vibrant swimwear in various colors.",
+    "images": [
+      {
+        "src": "/images/products/real-product-42-1-v2.jpeg",
+        "alt": "Product 42",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Chlorine Resistant Fabric",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Pool Team Collection | Balaji Traders",
+    "seoDescription": "Buy Eglider Pool Team Collection at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-43",
+    "slug": "eglider-swim-cap-duo",
+    "name": "Eglider Swim Cap Duo",
+    "brand": "Balaji",
+    "category": "Accessories",
+    "categorySlug": "accessories",
+    "sku": "BLJ-043",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Swim Cap Duo - Dynamic swim caps with vibrant patterns. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Dynamic swim caps with vibrant patterns.",
+    "images": [
+      {
+        "src": "/images/products/real-product-43-1-v2.jpeg",
+        "alt": "Product 43",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Silicone",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Swim Cap Duo | Balaji Traders",
+    "seoDescription": "Buy Eglider Swim Cap Duo at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-44",
+    "slug": "eglider-blue-swim-cap",
+    "name": "Eglider Blue Swim Cap",
+    "brand": "Balaji",
+    "category": "Accessories",
+    "categorySlug": "accessories",
+    "sku": "BLJ-044",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Blue Swim Cap - Sleek and vibrant design for performance. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Sleek and vibrant design for performance.",
+    "images": [
+      {
+        "src": "/images/products/real-product-44-1-v2.jpeg",
+        "alt": "Product 44",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Silicone",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Blue Swim Cap | Balaji Traders",
+    "seoDescription": "Buy Eglider Blue Swim Cap at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-45",
+    "slug": "eglider-dynamic-swim-cap",
+    "name": "Eglider Dynamic Swim Cap",
+    "brand": "Balaji",
+    "category": "Accessories",
+    "categorySlug": "accessories",
+    "sku": "BLJ-045",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Dynamic Swim Cap - A sleek white swim cap featuring vibrant blue and red geometric patterns. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "A sleek white swim cap featuring vibrant blue and red geometric patterns.",
+    "images": [
+      {
+        "src": "/images/products/real-product-45-1-v2.jpeg",
+        "alt": "Product 45",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Silicone",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Dynamic Swim Cap | Balaji Traders",
+    "seoDescription": "Buy Eglider Dynamic Swim Cap at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-46",
+    "slug": "eglider-premium-swim-cap",
+    "name": "Eglider Premium Swim Cap",
+    "brand": "Balaji",
+    "category": "Accessories",
+    "categorySlug": "accessories",
+    "sku": "BLJ-046",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Premium Swim Cap - Sleek silver design for streamlined performance. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Sleek silver design for streamlined performance.",
+    "images": [
+      {
+        "src": "/images/products/real-product-46-1-v2.jpeg",
+        "alt": "Product 46",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Silicone",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Premium Swim Cap | Balaji Traders",
+    "seoDescription": "Buy Eglider Premium Swim Cap at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-47",
+    "slug": "eglider-speedy-swim-suit",
+    "name": "Eglider Speedy Swim Suit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-047",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Speedy Swim Suit - Bright and stylish tie-dye design Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Bright and stylish tie-dye design",
+    "images": [
+      {
+        "src": "/images/products/real-product-47-1-v2.jpeg",
+        "alt": "Product 47",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Poly Spandex",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Speedy Swim Suit | Balaji Traders",
+    "seoDescription": "Buy Eglider Speedy Swim Suit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-48",
+    "slug": "eglider-classic-swimsuit",
+    "name": "Eglider Classic Swimsuit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-048",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Classic Swimsuit - Sleek black design with red accents. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Sleek black design with red accents.",
+    "images": [
+      {
+        "src": "/images/products/real-product-48-1-v2.jpeg",
+        "alt": "Product 48",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Classic Swimsuit | Balaji Traders",
+    "seoDescription": "Buy Eglider Classic Swimsuit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-49",
+    "slug": "eglider-aqua-motion-suit",
+    "name": "Eglider Aqua Motion Suit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-049",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Aqua Motion Suit - Dynamic design with a sleek pattern. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Dynamic design with a sleek pattern.",
+    "images": [
+      {
+        "src": "/images/products/real-product-49-1-v2.jpeg",
+        "alt": "Product 49",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "High-Quality Poly Spandex",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Aqua Motion Suit | Balaji Traders",
+    "seoDescription": "Buy Eglider Aqua Motion Suit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-50",
+    "slug": "eglider-vibrant-swimwear",
+    "name": "Eglider Vibrant Swimwear",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-050",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Vibrant Swimwear - Bright green and yellow tie-dye design. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Bright green and yellow tie-dye design.",
+    "images": [
+      {
+        "src": "/images/products/real-product-50-1-v2.jpeg",
+        "alt": "Product 50",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Poly Spandex",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Vibrant Swimwear | Balaji Traders",
+    "seoDescription": "Buy Eglider Vibrant Swimwear at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-51",
+    "slug": "eglider-funky-swim-suit",
+    "name": "Eglider Funky Swim Suit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-051",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Funky Swim Suit - Vibrant blue with abstract patterns. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Vibrant blue with abstract patterns.",
+    "images": [
+      {
+        "src": "/images/products/real-product-51-1-v2.jpeg",
+        "alt": "Product 51",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Funky Swim Suit | Balaji Traders",
+    "seoDescription": "Buy Eglider Funky Swim Suit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-52",
+    "slug": "eglider-neon-performance-suit",
+    "name": "Eglider Neon Performance Suit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-052",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Neon Performance Suit - Vibrant neon green for enhanced visibility and style. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Vibrant neon green for enhanced visibility and style.",
+    "images": [
+      {
+        "src": "/images/products/real-product-52-1-v2.jpeg",
+        "alt": "Product 52",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Poly Spandex",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Neon Performance Suit | Balaji Traders",
+    "seoDescription": "Buy Eglider Neon Performance Suit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-53",
+    "slug": "eglider-stylish-swim-shorts",
+    "name": "Eglider Stylish Swim Shorts",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-053",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Stylish Swim Shorts - Vibrant blue pattern with open back. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Vibrant blue pattern with open back.",
+    "images": [
+      {
+        "src": "/images/products/real-product-53-1-v2.jpeg",
+        "alt": "Product 53",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Stylish Swim Shorts | Balaji Traders",
+    "seoDescription": "Buy Eglider Stylish Swim Shorts at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-54",
+    "slug": "eglider-dream-swim-suit",
+    "name": "Eglider Dream Swim Suit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-054",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Dream Swim Suit - Vibrant, leaf-patterned one-piece design. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Vibrant, leaf-patterned one-piece design.",
+    "images": [
+      {
+        "src": "/images/products/real-product-54-1-v2.jpeg",
+        "alt": "Product 54",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Poly/Spandex Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Dream Swim Suit | Balaji Traders",
+    "seoDescription": "Buy Eglider Dream Swim Suit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-55",
+    "slug": "eglider-dreamy-swimsuit",
+    "name": "Eglider Dreamy Swimsuit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-055",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Dreamy Swimsuit - Sleek design with a fluid wave pattern. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Sleek design with a fluid wave pattern.",
+    "images": [
+      {
+        "src": "/images/products/real-product-55-1-v2.jpeg",
+        "alt": "Product 55",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "4-Way Stretch Poly/Spandex",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Dreamy Swimsuit | Balaji Traders",
+    "seoDescription": "Buy Eglider Dreamy Swimsuit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-56",
+    "slug": "eglider-vibrant-swim-suit",
+    "name": "Eglider Vibrant Swim Suit",
+    "brand": "Balaji",
+    "category": "Swimwear",
+    "categorySlug": "swimwear",
+    "sku": "BLJ-056",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Vibrant Swim Suit - A stylish one-piece with colorful patterns and a sleek cut. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "A stylish one-piece with colorful patterns and a sleek cut.",
+    "images": [
+      {
+        "src": "/images/products/real-product-56-1-v2.jpeg",
+        "alt": "Product 56",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Polyester Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Vibrant Swim Suit | Balaji Traders",
+    "seoDescription": "Buy Eglider Vibrant Swim Suit at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  },
+  {
+    "id": "prod-57",
+    "slug": "eglider-ultimate-swim-backpack",
+    "name": "Eglider Ultimate Swim Backpack",
+    "brand": "Balaji",
+    "category": "Accessories",
+    "categorySlug": "accessories",
+    "sku": "BLJ-057",
+    "price": 500,
+    "mrp": 750,
+    "description": "Eglider Ultimate Swim Backpack - Durable and spacious backpack in stylish purple. Featuring durable materials and high-performance design for competitive swimming.",
+    "shortDescription": "Durable and spacious backpack in stylish purple.",
+    "images": [
+      {
+        "src": "/images/products/real-product-57-1-v2.jpeg",
+        "alt": "Product 57",
+        "width": 800,
+        "height": 1000
+      }
+    ],
+    "colors": [
+      "Standard"
+    ],
+    "sizes": [
+      "Standard"
+    ],
+    "material": "Nylon Blend",
+    "features": [
+      "Premium quality",
+      "Durable"
+    ],
+    "availability": "in-stock",
+    "tags": [
+      "product"
+    ],
+    "gender": "unisex",
+    "isFeatured": false,
+    "isNewArrival": false,
+    "seoTitle": "Eglider Ultimate Swim Backpack | Balaji Traders",
+    "seoDescription": "Buy Eglider Ultimate Swim Backpack at Balaji Traders.",
+    "keywords": [
+      "product",
+      "balaji"
+    ]
+  }
+]
