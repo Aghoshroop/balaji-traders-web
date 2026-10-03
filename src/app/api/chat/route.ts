@@ -34,7 +34,7 @@ CUSTOMER ASSISTANCE GUIDELINES:
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || '';
 const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || 'openai/gpt-4o';
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://balajitraders.com';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.balajiswimwears.in';
 const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || 'Balaji Traders Swimwear Support';
 
 export async function POST(req: Request) {

@@ -61,20 +61,22 @@ export const BUSINESS_HOURS = {
 } as const;
 
 export const SEO = {
-  siteUrl: 'https://www.balajitraders.com', // UPDATE: Replace with actual domain
-  siteName: 'Balaji Traders',
-  defaultTitle: 'Balaji Traders — Swimwear Distributor in Chennai | EGLIDER Distributor',
+  siteUrl: 'https://www.balajiswimwears.in', // UPDATE: Replace with actual domain
+  siteName: 'Balaji Traders — The Best Swimwear Distributor in Chennai',
+  defaultTitle: 'Top Swimwear Distributor in Chennai | Buy EGLIDER Racing Swimwear | Balaji Traders',
   defaultDescription:
-    'Balaji Traders is a swimwear distributor in Chennai, Tamil Nadu. Distributor of EGLIDER swimming costumes, racing swimwear, training gear, goggles, and swimming accessories. Enquire on WhatsApp for wholesale pricing.',
+    'Looking for the best swimwear distributor in Chennai? Balaji Traders is the leading wholesale supplier of EGLIDER competition swimming costumes, racing jammers, training gear, and swimming accessories in Tamil Nadu. Top-rated, trusted since 2001. Buy premium swimming suits for academies, coaches, and retail.',
   defaultKeywords: [
-    'swimwear distributor Chennai',
-    'swimming costume wholesale',
-    'EGLIDER distributor',
-    'swimwear wholesaler Tamil Nadu',
-    'swimming accessories wholesale',
-    'competitive swimwear India',
-    'bulk swimwear supplier',
-    'Balaji Traders',
+    'best swimwear distributor in Chennai',
+    'top swimming costume wholesale Tamil Nadu',
+    'EGLIDER racing swimwear distributor',
+    'buy competition swimming suits Chennai',
+    'where to buy swimming accessories wholesale',
+    'leading swimwear wholesaler India',
+    'Balaji Traders swimwear',
+    'professional swimming gear supplier',
+    'premium racing jammers wholesale',
+    'FINA approved style swimwear distributors',
   ],
   ogImage: '/og-image.jpg', // UPDATE: Add actual OG image
 } as const;

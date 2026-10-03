@@ -10,11 +10,20 @@ export function getOrganizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: BUSINESS.name,
+    alternateName: 'Balaji Swimwears Chennai',
     description: BUSINESS.description,
     url: SEO.siteUrl,
     logo: `${SEO.siteUrl}/logo.png`,
     taxID: BUSINESS.gstin,
     foundingDate: String(BUSINESS.established),
+    knowsAbout: [
+      'Wholesale Swimwear',
+      'Competition Racing Suits',
+      'Swimming Accessories',
+      'EGLIDER Swimwear',
+      'Swimming Goggles',
+      'Swimming Caps',
+    ],
     address: {
       '@type': 'PostalAddress',
       streetAddress: BUSINESS.location.street,
@@ -27,18 +36,20 @@ export function getOrganizationSchema() {
       '@type': 'ContactPoint',
       telephone: CONTACT.phone,
       contactType: 'sales',
+      areaServed: ['Chennai', 'Tamil Nadu', 'South India', 'India'],
       availableLanguage: ['English', 'Tamil', 'Hindi'],
     },
+    sameAs: Object.values(SOCIAL_LINKS).filter(Boolean),
   };
 }
 
 export function getLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'WholesaleStore', // More specific than LocalBusiness
     '@id': `${SEO.siteUrl}/#localbusiness`,
     name: BUSINESS.name,
-    description: BUSINESS.description,
+    description: 'The premier wholesale swimwear distributor in Chennai. Top rated supplier of EGLIDER racing suits, training gear, and swimming accessories for academies and retailers.',
     url: SEO.siteUrl,
     image: `${SEO.siteUrl}/og-image.jpg`,
     taxID: BUSINESS.gstin,
@@ -57,6 +68,15 @@ export function getLocalBusinessSchema() {
       '@type': 'GeoCoordinates',
       latitude: 13.0935,
       longitude: 80.2526,
+    },
+    areaServed: {
+      '@type': 'GeoCircle',
+      geoMidpoint: {
+        '@type': 'GeoCoordinates',
+        latitude: 13.0935,
+        longitude: 80.2526,
+      },
+      geoRadius: '500000', // 500km radius
     },
     openingHoursSpecification: [
       {

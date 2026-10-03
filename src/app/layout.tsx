@@ -21,7 +21,16 @@ export const metadata: Metadata = {
   },
   description: SEO.defaultDescription,
   keywords: [...SEO.defaultKeywords],
-  authors: [{ name: BUSINESS.name }],
+  authors: [{ name: BUSINESS.name, url: SEO.siteUrl }],
+  creator: BUSINESS.name,
+  publisher: BUSINESS.name,
+  applicationName: BUSINESS.name,
+  category: 'ecommerce',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
     icon: '/logo.png',
     apple: '/logo.png',
