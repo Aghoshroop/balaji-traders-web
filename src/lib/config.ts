@@ -61,7 +61,7 @@ export const BUSINESS_HOURS = {
 } as const;
 
 export const SEO = {
-  siteUrl: 'https://balajitraders.com', // UPDATE: Replace with actual domain
+  siteUrl: 'https://www.balajitraders.com', // UPDATE: Replace with actual domain
   siteName: 'Balaji Traders',
   defaultTitle: 'Balaji Traders — Swimwear Distributor in Chennai | EGLIDER Distributor',
   defaultDescription:
