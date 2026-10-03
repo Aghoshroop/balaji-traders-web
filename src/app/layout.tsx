@@ -88,9 +88,10 @@ export default function RootLayout({
                     var nav = window.performance.getEntriesByType('navigation')[0];
                     if (nav && nav.type === 'reload') isReload = true;
                   }
+                  var isAdmin = window.location.pathname.indexOf('/hidden-admin') === 0;
                   var entered = sessionStorage.getItem('bt_session_started_v1');
                   var force = window.location.search.indexOf('splash=true') !== -1;
-                  if ((!entered && !isReload) || force) {
+                  if (((!entered && !isReload) || force) && !isAdmin) {
                     document.documentElement.classList.add('has-splash-intro');
                   }
                 } catch(e) {}
@@ -118,14 +119,12 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col w-full max-w-full overflow-x-hidden">
-        {/* Zero-latency initial curtain - prevents any flash of store content before splash video */}
+        {/* Zero-latency initial curtain - prevents any flash of store content before splash video without showing a loading spinner */}
         <div
           id="splash-curtain"
           style={{ display: 'none' }}
-          className="fixed inset-0 z-[99998] bg-black items-center justify-center pointer-events-auto"
-        >
-          <div className="w-8 h-8 rounded-full border-2 border-sky-400 border-t-transparent animate-spin" />
-        </div>
+          className="fixed inset-0 z-[99998] bg-black pointer-events-auto"
+        />
 
         <SmoothScrollProvider>
           <AppLayout>{children}</AppLayout>

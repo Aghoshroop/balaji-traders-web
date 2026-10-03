@@ -251,10 +251,10 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       role="dialog"
       aria-label="Welcome to Balaji Traders splash screen"
       aria-modal="true"
-      className={`fixed inset-0 z-[9999] bg-black flex items-center justify-center overflow-hidden transition-all duration-700 ease-out select-none ${
+      className={`fixed inset-0 z-[9999] bg-black flex items-center justify-center overflow-hidden transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] select-none ${
         isExiting
-          ? 'opacity-0 scale-105 pointer-events-none'
-          : 'opacity-100 scale-100'
+          ? '-translate-y-full pointer-events-none'
+          : 'translate-y-0'
       }`}
     >
       {/* ============================================================ */}

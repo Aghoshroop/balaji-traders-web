@@ -1,4 +1,4 @@
-import { BUSINESS, CONTACT, SEO } from './config';
+import { BUSINESS, CONTACT, SEO, SOCIAL_LINKS } from './config';
 import type { Product, BreadcrumbItem, FAQItem } from '@/types';
 
 /**
